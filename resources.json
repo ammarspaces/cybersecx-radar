@@ -1,0 +1,9758 @@
+{
+  "version": "1.0",
+  "name": "The Cybersecurity Radar",
+  "description": "Master resource database for a cybersecurity signal-to-investigation radar.",
+  "schema": {
+    "resource": {
+      "id": "unique stable identifier",
+      "name": "human-readable resource name",
+      "domain": "primary domain or platform domain",
+      "path": "optional path",
+      "type": "resource type",
+      "categories": "one or more radar categories",
+      "regions": "global and/or regional coverage",
+      "tier": "source priority tier 1-5",
+      "role": "one or more signal/research/operational/community/primary roles",
+      "tags": "searchable keywords",
+      "health": "source health tracking object",
+      "warning": "optional warning shown to the user"
+    }
+  },
+  "radar": {
+    "core_loop": [
+      "signal",
+      "question",
+      "primary_source",
+      "triangulation",
+      "hands_on",
+      "understanding",
+      "artifact"
+    ],
+    "anti_collector": {
+      "enabled": true,
+      "bad_loop": [
+        "article",
+        "bookmark",
+        "tweet",
+        "bookmark",
+        "paper",
+        "bookmark",
+        "never_investigate"
+      ],
+      "good_loop": [
+        "signal",
+        "question",
+        "primary_source",
+        "investigate",
+        "reproduce_or_analyze",
+        "understand",
+        "artifact"
+      ]
+    },
+    "hands_on": [
+      "lab",
+      "pcap",
+      "malware_analysis",
+      "reverse_engineering",
+      "wireshark",
+      "volatility",
+      "siem",
+      "ndr",
+      "detection_rule",
+      "yara",
+      "sigma",
+      "poc",
+      "script",
+      "ctf",
+      "osint",
+      "vulnerability_reproduction"
+    ],
+    "artifacts": [
+      "writeup",
+      "research_note",
+      "detection_rule",
+      "yara",
+      "sigma",
+      "script",
+      "poc",
+      "lab",
+      "diagram",
+      "presentation",
+      "github_repo"
+    ]
+  },
+  "tiers": {
+    "1": {
+      "name": "real_time_sensor",
+      "description": "Fast-moving signal sources and practitioner chatter."
+    },
+    "2": {
+      "name": "operational_radar",
+      "description": "Operational vulnerability, IOC, CERT and incident sources."
+    },
+    "3": {
+      "name": "technical_research",
+      "description": "Professional security research organizations."
+    },
+    "4": {
+      "name": "community",
+      "description": "Communities, conferences and practitioner ecosystems."
+    },
+    "5": {
+      "name": "primary_material",
+      "description": "PoCs, exploits, samples, PCAPs, code, papers, rules and original technical material."
+    }
+  },
+  "regions": {
+    "global": {
+      "name": "Global",
+      "priority": "high"
+    },
+    "asia": {
+      "name": "Asia",
+      "countries": [
+        "Indonesia",
+        "Singapore",
+        "Malaysia",
+        "China",
+        "Japan",
+        "Korea",
+        "Taiwan",
+        "India",
+        "Vietnam",
+        "Thailand",
+        "Philippines",
+        "Hong Kong"
+      ]
+    },
+    "asean": {
+      "name": "ASEAN",
+      "countries": [
+        "Indonesia",
+        "Singapore",
+        "Malaysia",
+        "Vietnam",
+        "Thailand",
+        "Philippines"
+      ]
+    },
+    "middle_east": {
+      "name": "Middle East",
+      "countries": [
+        "Israel",
+        "UAE",
+        "Saudi Arabia",
+        "Qatar"
+      ]
+    },
+    "europe": {
+      "name": "Europe",
+      "countries": [
+        "UK",
+        "Germany",
+        "France",
+        "Netherlands",
+        "Poland",
+        "Switzerland",
+        "Scandinavia",
+        "Eastern Europe"
+      ]
+    },
+    "americas": {
+      "name": "Americas",
+      "countries": [
+        "USA",
+        "Canada",
+        "Brazil",
+        "Argentina",
+        "Mexico",
+        "Chile",
+        "Colombia"
+      ]
+    },
+    "africa": {
+      "name": "Africa",
+      "countries": [
+        "South Africa",
+        "Kenya",
+        "Nigeria",
+        "Pan-African"
+      ]
+    },
+    "indonesia": {
+      "name": "Indonesia",
+      "priority": "high"
+    },
+    "singapore": {
+      "name": "Singapore",
+      "priority": "high"
+    },
+    "malaysia": {
+      "name": "Malaysia",
+      "priority": "high"
+    }
+  },
+  "resources": [
+    {
+      "id": "social-x",
+      "name": "X / Twitter",
+      "domain": "x.com",
+      "path": "",
+      "type": "social",
+      "categories": [
+        "social",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "sensor",
+        "researcher_discovery"
+      ],
+      "tags": [
+        "infosec",
+        "threat-intel",
+        "dfir",
+        "malware",
+        "research",
+        "ioc",
+        "exploit"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "social-bluesky",
+      "name": "Bluesky",
+      "domain": "bsky.app",
+      "path": "",
+      "type": "social",
+      "categories": [
+        "social",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "sensor",
+        "researcher_discovery"
+      ],
+      "tags": [
+        "infosec",
+        "cybersecurity",
+        "research",
+        "dfir",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "social-linkedin",
+      "name": "LinkedIn",
+      "domain": "linkedin.com",
+      "path": "",
+      "type": "social",
+      "categories": [
+        "social",
+        "professional"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "professional_network",
+        "researcher_discovery"
+      ],
+      "tags": [
+        "cybersecurity",
+        "jobs",
+        "researchers",
+        "vendors",
+        "recruiters"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "fediverse-infosec",
+      "name": "Infosec.Exchange",
+      "domain": "infosec.exchange",
+      "path": "",
+      "type": "fediverse",
+      "categories": [
+        "fediverse",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "sensor",
+        "community"
+      ],
+      "tags": [
+        "infosec",
+        "mastodon",
+        "threat-intel",
+        "dfir",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "fediverse-defcon",
+      "name": "DEFCON.social",
+      "domain": "defcon.social",
+      "path": "",
+      "type": "fediverse",
+      "categories": [
+        "fediverse",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "sensor",
+        "community"
+      ],
+      "tags": [
+        "defcon",
+        "infosec",
+        "research",
+        "hacking"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "reddit-netsec",
+      "name": "r/netsec",
+      "domain": "reddit.com",
+      "path": "/r/netsec/",
+      "type": "reddit",
+      "categories": [
+        "reddit",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "research_discovery"
+      ],
+      "tags": [
+        "network-security",
+        "research",
+        "tools",
+        "vulnerabilities"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "reddit-netsecstudents",
+      "name": "r/netsecstudents",
+      "domain": "reddit.com",
+      "path": "/r/netsecstudents/",
+      "type": "reddit",
+      "categories": [
+        "reddit",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "learning"
+      ],
+      "tags": [
+        "students",
+        "learning",
+        "career",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "reddit-blueteamsec",
+      "name": "r/blueteamsec",
+      "domain": "reddit.com",
+      "path": "/r/blueteamsec/",
+      "type": "reddit",
+      "categories": [
+        "reddit",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "detection"
+      ],
+      "tags": [
+        "blue-team",
+        "soc",
+        "detection",
+        "threat-hunting"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "reddit-dfir",
+      "name": "r/DFIR",
+      "domain": "reddit.com",
+      "path": "/r/DFIR/",
+      "type": "reddit",
+      "categories": [
+        "reddit",
+        "dfir"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "case_discussion"
+      ],
+      "tags": [
+        "dfir",
+        "forensics",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "reddit-reverse",
+      "name": "r/ReverseEngineering",
+      "domain": "reddit.com",
+      "path": "/r/ReverseEngineering/",
+      "type": "reddit",
+      "categories": [
+        "reddit",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "research_discovery"
+      ],
+      "tags": [
+        "reverse-engineering",
+        "re",
+        "binary-analysis"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "reddit-malware",
+      "name": "r/MalwareAnalysis",
+      "domain": "reddit.com",
+      "path": "/r/MalwareAnalysis/",
+      "type": "reddit",
+      "categories": [
+        "reddit",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "malware_research"
+      ],
+      "tags": [
+        "malware",
+        "analysis",
+        "sandbox",
+        "reverse-engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "reddit-cybersecurity",
+      "name": "r/cybersecurity",
+      "domain": "reddit.com",
+      "path": "/r/cybersecurity/",
+      "type": "reddit",
+      "categories": [
+        "reddit",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "general_signal"
+      ],
+      "tags": [
+        "cybersecurity",
+        "career",
+        "news",
+        "community"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "code-github",
+      "name": "GitHub",
+      "domain": "github.com",
+      "path": "",
+      "type": "code_platform",
+      "categories": [
+        "code",
+        "security_research",
+        "primary_material"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "code",
+        "poc",
+        "detection"
+      ],
+      "tags": [
+        "poc",
+        "exploit",
+        "yara",
+        "sigma",
+        "malware",
+        "security-tools",
+        "commits"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "code-gitlab",
+      "name": "GitLab",
+      "domain": "gitlab.com",
+      "path": "",
+      "type": "code_platform",
+      "categories": [
+        "code",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "code"
+      ],
+      "tags": [
+        "security",
+        "source-code",
+        "research",
+        "tools"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "code-codeberg",
+      "name": "Codeberg",
+      "domain": "codeberg.org",
+      "path": "",
+      "type": "code_platform",
+      "categories": [
+        "code",
+        "open_source"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "code"
+      ],
+      "tags": [
+        "open-source",
+        "security",
+        "code"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "community-discord",
+      "name": "Discord",
+      "domain": "discord.com",
+      "path": "",
+      "type": "community_platform",
+      "categories": [
+        "communities",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "real_time"
+      ],
+      "tags": [
+        "defcon",
+        "ctf",
+        "htb",
+        "thm",
+        "malware",
+        "reverse-engineering",
+        "bug-bounty",
+        "osint"
+      ],
+      "warning": "High noise. Community discussion is not authoritative evidence.",
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "community-matrix",
+      "name": "Matrix",
+      "domain": "matrix.org",
+      "path": "",
+      "type": "community_platform",
+      "categories": [
+        "communities",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "real_time"
+      ],
+      "tags": [
+        "security",
+        "open-source",
+        "communities"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "community-telegram",
+      "name": "Telegram",
+      "domain": "telegram.org",
+      "path": "",
+      "type": "community_platform",
+      "categories": [
+        "communities",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "community",
+        "real_time"
+      ],
+      "tags": [
+        "security",
+        "threat-intel",
+        "malware",
+        "osint"
+      ],
+      "warning": "High noise. Never treat community claims as authoritative evidence without validation.",
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-youtube",
+      "name": "YouTube",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_platform",
+      "categories": [
+        "video",
+        "education"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "research_discovery"
+      ],
+      "tags": [
+        "security",
+        "conference",
+        "ctf",
+        "malware",
+        "reverse-engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-defcon",
+      "name": "DEF CON",
+      "domain": "youtube.com",
+      "path": "/@DEFCONConference",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "conference"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research",
+        "education"
+      ],
+      "tags": [
+        "defcon",
+        "talks",
+        "hacking",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-blackhat",
+      "name": "Black Hat",
+      "domain": "youtube.com",
+      "path": "/@BlackHatOfficialYT",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "conference"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research",
+        "education"
+      ],
+      "tags": [
+        "black-hat",
+        "research",
+        "talks"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-hitb",
+      "name": "HITB",
+      "domain": "youtube.com",
+      "path": "/@hitbsecconf",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "conference"
+      ],
+      "regions": [
+        "asia",
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research",
+        "education"
+      ],
+      "tags": [
+        "hitb",
+        "asia",
+        "research",
+        "hacking"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-offensivecon",
+      "name": "OffensiveCon",
+      "domain": "youtube.com",
+      "path": "/@OffensiveCon",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "conference"
+      ],
+      "regions": [
+        "global",
+        "europe"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research"
+      ],
+      "tags": [
+        "offensive-security",
+        "research",
+        "exploit-development"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-liveoverflow",
+      "name": "LiveOverflow",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "education",
+        "ctf"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "technical_learning"
+      ],
+      "tags": [
+        "ctf",
+        "binary",
+        "reverse-engineering",
+        "exploit-development"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-ippsec",
+      "name": "IppSec",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "ctf"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "hands_on"
+      ],
+      "tags": [
+        "hack-the-box",
+        "pentesting",
+        "ctf",
+        "walkthrough"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-13cubed",
+      "name": "13Cubed",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "dfir"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "dfir"
+      ],
+      "tags": [
+        "dfir",
+        "forensics",
+        "memory-forensics"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-oalabs",
+      "name": "OALabs",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "malware_research"
+      ],
+      "tags": [
+        "malware",
+        "reverse-engineering",
+        "analysis"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-mafh",
+      "name": "MalwareAnalysisForHedgehogs",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "malware_research"
+      ],
+      "tags": [
+        "malware-analysis",
+        "reverse-engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-john-hammond",
+      "name": "John Hammond",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "blue_team",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "hands_on"
+      ],
+      "tags": [
+        "malware",
+        "ctf",
+        "dfir",
+        "blue-team"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-tcm",
+      "name": "The Cyber Mentor",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "offensive_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "hands_on"
+      ],
+      "tags": [
+        "pentesting",
+        "red-team",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-david-bombal",
+      "name": "David Bombal",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "network_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education"
+      ],
+      "tags": [
+        "networking",
+        "security",
+        "labs"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-bhis",
+      "name": "Black Hills Information Security",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "community"
+      ],
+      "tags": [
+        "blue-team",
+        "soc",
+        "penetration-testing",
+        "defensive-security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-sans",
+      "name": "SANS",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "education"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "research"
+      ],
+      "tags": [
+        "security",
+        "dfir",
+        "blue-team",
+        "training"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-specterops",
+      "name": "SpecterOps",
+      "domain": "youtube.com",
+      "path": "",
+      "type": "video_channel",
+      "categories": [
+        "video",
+        "identity",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "research"
+      ],
+      "tags": [
+        "active-directory",
+        "identity",
+        "detection",
+        "red-team"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "video-twitch",
+      "name": "Twitch",
+      "domain": "twitch.tv",
+      "path": "",
+      "type": "video_platform",
+      "categories": [
+        "video",
+        "real_time"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 1,
+      "role": [
+        "real_time",
+        "community"
+      ],
+      "tags": [
+        "ctf",
+        "reverse-engineering",
+        "malware",
+        "security-research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-bleepingcomputer",
+      "name": "BleepingComputer",
+      "domain": "bleepingcomputer.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "incident_signal"
+      ],
+      "tags": [
+        "malware",
+        "ransomware",
+        "vulnerability",
+        "incident"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-krebs",
+      "name": "KrebsOnSecurity",
+      "domain": "krebsonsecurity.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "investigation_signal"
+      ],
+      "tags": [
+        "cybercrime",
+        "breach",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-hackernews",
+      "name": "The Hacker News",
+      "domain": "thehackernews.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "signal"
+      ],
+      "tags": [
+        "cybersecurity",
+        "vulnerability",
+        "breach"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-darkreading",
+      "name": "Dark Reading",
+      "domain": "darkreading.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "enterprise_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "industry_signal"
+      ],
+      "tags": [
+        "enterprise-security",
+        "threats",
+        "defense"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-securityweek",
+      "name": "SecurityWeek",
+      "domain": "securityweek.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "vulnerability_signal"
+      ],
+      "tags": [
+        "vulnerability",
+        "enterprise",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-therecord",
+      "name": "The Record",
+      "domain": "therecord.media",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "geopolitical_signal"
+      ],
+      "tags": [
+        "cybersecurity",
+        "nation-state",
+        "incidents"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-cyberscoop",
+      "name": "CyberScoop",
+      "domain": "cyberscoop.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "government"
+      ],
+      "regions": [
+        "americas",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "government_signal"
+      ],
+      "tags": [
+        "government",
+        "cyber-policy",
+        "threats"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-cso",
+      "name": "CSO Online",
+      "domain": "csoonline.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "enterprise_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "industry_signal"
+      ],
+      "tags": [
+        "ciso",
+        "enterprise",
+        "risk"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-ars",
+      "name": "Ars Technica Security",
+      "domain": "arstechnica.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "technology"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "technology_signal"
+      ],
+      "tags": [
+        "security",
+        "technology",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-wired",
+      "name": "WIRED Security",
+      "domain": "wired.com",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "general_signal"
+      ],
+      "tags": [
+        "security",
+        "technology",
+        "privacy"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-404media",
+      "name": "404 Media",
+      "domain": "404media.co",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "privacy",
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "investigation_signal",
+        "news"
+      ],
+      "tags": [
+        "privacy",
+        "hacking",
+        "surveillance",
+        "osint"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-sans-newsbites",
+      "name": "SANS NewsBites",
+      "domain": "sans.org",
+      "path": "",
+      "type": "news",
+      "categories": [
+        "news",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "news",
+        "curation"
+      ],
+      "tags": [
+        "security",
+        "research",
+        "threats"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "news-sans-risk",
+      "name": "SANS @RISK",
+      "domain": "sans.org",
+      "path": "",
+      "type": "security_digest",
+      "categories": [
+        "news",
+        "vulnerability",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "digest",
+        "operational_signal"
+      ],
+      "tags": [
+        "vulnerability",
+        "threats",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-cve",
+      "name": "CVE",
+      "domain": "cve.org",
+      "path": "",
+      "type": "vulnerability_database",
+      "categories": [
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "primary_reference"
+      ],
+      "tags": [
+        "cve",
+        "vulnerability",
+        "identifier"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-nvd",
+      "name": "NVD",
+      "domain": "nvd.nist.gov",
+      "path": "",
+      "type": "vulnerability_database",
+      "categories": [
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "vulnerability_analysis"
+      ],
+      "tags": [
+        "cve",
+        "cvss",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-cisa-kev",
+      "name": "CISA KEV",
+      "domain": "cisa.gov",
+      "path": "",
+      "type": "vulnerability_database",
+      "categories": [
+        "vulnerability",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "prioritization"
+      ],
+      "tags": [
+        "kev",
+        "exploited",
+        "vulnerability",
+        "known-exploitation"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-exploitdb",
+      "name": "Exploit-DB",
+      "domain": "exploit-db.com",
+      "path": "",
+      "type": "exploit_database",
+      "categories": [
+        "vulnerability",
+        "offensive_security",
+        "primary_material"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_material",
+        "exploit_research"
+      ],
+      "tags": [
+        "exploit",
+        "poc",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-ghsa",
+      "name": "GitHub Security Advisories",
+      "domain": "github.com",
+      "path": "",
+      "type": "advisory_database",
+      "categories": [
+        "vulnerability",
+        "code"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "developer_security"
+      ],
+      "tags": [
+        "ghsa",
+        "dependency",
+        "vulnerability",
+        "supply-chain"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-zdi",
+      "name": "ZDI",
+      "domain": "zerodayinitiative.com",
+      "path": "",
+      "type": "vulnerability_research",
+      "categories": [
+        "vulnerability",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "vulnerability_disclosure"
+      ],
+      "tags": [
+        "zero-day",
+        "vulnerability",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-projectzero",
+      "name": "Google Project Zero",
+      "domain": "googleprojectzero.blogspot.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "vulnerability_research"
+      ],
+      "tags": [
+        "zero-day",
+        "exploit",
+        "browser",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-cnvd",
+      "name": "CNVD",
+      "domain": "cnvd.org.cn",
+      "path": "",
+      "type": "vulnerability_database",
+      "categories": [
+        "vulnerability",
+        "chinese_vulnerability"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar"
+      ],
+      "tags": [
+        "china",
+        "vulnerability",
+        "cnvd"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-cnnvd",
+      "name": "CNNVD",
+      "domain": "cnnvd.org.cn",
+      "path": "",
+      "type": "vulnerability_database",
+      "categories": [
+        "vulnerability",
+        "chinese_vulnerability"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar"
+      ],
+      "tags": [
+        "china",
+        "vulnerability",
+        "cnnvd"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-malwarebazaar",
+      "name": "MalwareBazaar",
+      "domain": "abuse.ch",
+      "path": "",
+      "type": "malware_repository",
+      "categories": [
+        "malware",
+        "ioc"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "malware_samples"
+      ],
+      "tags": [
+        "malware",
+        "samples",
+        "hashes",
+        "ioc"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-urlhaus",
+      "name": "URLhaus",
+      "domain": "abuse.ch",
+      "path": "",
+      "type": "url_repository",
+      "categories": [
+        "malware",
+        "ioc",
+        "network"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "ioc"
+      ],
+      "tags": [
+        "malicious-url",
+        "ioc",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-threatfox",
+      "name": "ThreatFox",
+      "domain": "abuse.ch",
+      "path": "",
+      "type": "ioc_database",
+      "categories": [
+        "malware",
+        "ioc",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "ioc"
+      ],
+      "tags": [
+        "ioc",
+        "threat-intel",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-feodo",
+      "name": "Feodo Tracker",
+      "domain": "abuse.ch",
+      "path": "",
+      "type": "botnet_tracker",
+      "categories": [
+        "malware",
+        "ioc",
+        "network"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "ioc"
+      ],
+      "tags": [
+        "feodo",
+        "botnet",
+        "c2",
+        "ioc"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-virustotal",
+      "name": "VirusTotal",
+      "domain": "virustotal.com",
+      "path": "",
+      "type": "malware_analysis",
+      "categories": [
+        "malware",
+        "ioc",
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "triangulation",
+        "analysis",
+        "ioc"
+      ],
+      "tags": [
+        "malware",
+        "hash",
+        "url",
+        "domain",
+        "ip",
+        "sandbox"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-malpedia",
+      "name": "Malpedia",
+      "domain": "malpedia.caad.fkie.fraunhofer.de",
+      "path": "",
+      "type": "malware_knowledgebase",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "malware_research",
+        "reference"
+      ],
+      "tags": [
+        "malware",
+        "families",
+        "actors",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-vxunderground",
+      "name": "VX-Underground",
+      "domain": "vx-underground.org",
+      "path": "",
+      "type": "malware_archive",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_material",
+        "malware_research"
+      ],
+      "tags": [
+        "malware",
+        "samples",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-anyrun",
+      "name": "ANY.RUN",
+      "domain": "any.run",
+      "path": "",
+      "type": "sandbox",
+      "categories": [
+        "malware",
+        "sandbox",
+        "ioc"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "analysis",
+        "sandbox",
+        "triangulation"
+      ],
+      "tags": [
+        "sandbox",
+        "malware",
+        "behavior",
+        "ioc"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-triage",
+      "name": "Triage",
+      "domain": "tria.ge",
+      "path": "",
+      "type": "sandbox",
+      "categories": [
+        "malware",
+        "sandbox"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "analysis",
+        "sandbox"
+      ],
+      "tags": [
+        "malware",
+        "sandbox",
+        "behavior"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-joe-sandbox",
+      "name": "Joe Sandbox",
+      "domain": "joesandbox.com",
+      "path": "",
+      "type": "sandbox",
+      "categories": [
+        "malware",
+        "sandbox"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "analysis",
+        "sandbox"
+      ],
+      "tags": [
+        "malware",
+        "sandbox",
+        "behavior"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-hybrid-analysis",
+      "name": "Hybrid Analysis",
+      "domain": "hybrid-analysis.com",
+      "path": "",
+      "type": "sandbox",
+      "categories": [
+        "malware",
+        "sandbox",
+        "ioc"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "analysis",
+        "sandbox",
+        "ioc"
+      ],
+      "tags": [
+        "malware",
+        "sandbox",
+        "ioc"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ioc-otx",
+      "name": "AlienVault OTX",
+      "domain": "otx.alienvault.com",
+      "path": "",
+      "type": "threat_intel_platform",
+      "categories": [
+        "malware",
+        "ioc",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "ioc",
+        "community_intel",
+        "triangulation"
+      ],
+      "tags": [
+        "ioc",
+        "pulses",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-google-tag",
+      "name": "Google TAG",
+      "domain": "blog.google",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "nation_state_tracking"
+      ],
+      "tags": [
+        "apt",
+        "nation-state",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-microsoft-security",
+      "name": "Microsoft Security",
+      "domain": "microsoft.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "threat_intel",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel",
+        "detection"
+      ],
+      "tags": [
+        "microsoft",
+        "threat-intel",
+        "detection",
+        "cloud"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-unit42",
+      "name": "Palo Alto Unit 42",
+      "domain": "unit42.paloaltonetworks.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "threat_intel",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel"
+      ],
+      "tags": [
+        "apt",
+        "malware",
+        "cloud",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-trailofbits",
+      "name": "Trail of Bits",
+      "domain": "trailofbits.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "security_research",
+        "software_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "software_security"
+      ],
+      "tags": [
+        "software-security",
+        "cryptography",
+        "reverse-engineering",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-talos",
+      "name": "Cisco Talos",
+      "domain": "talosintelligence.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "threat_intel",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel",
+        "malware"
+      ],
+      "tags": [
+        "malware",
+        "threat-intel",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-crowdstrike",
+      "name": "CrowdStrike",
+      "domain": "crowdstrike.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "security_research",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel"
+      ],
+      "tags": [
+        "apt",
+        "threat-intel",
+        "endpoint"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-mandiant",
+      "name": "Mandiant / Google Threat Intelligence",
+      "domain": "cloud.google.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "security_research",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "incident_response"
+      ],
+      "tags": [
+        "apt",
+        "incident-response",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-eset",
+      "name": "ESET Research",
+      "domain": "welivesecurity.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "malware"
+      ],
+      "regions": [
+        "global",
+        "europe"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "malware"
+      ],
+      "tags": [
+        "malware",
+        "apt",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-sentinellabs",
+      "name": "SentinelLabs",
+      "domain": "sentinelone.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel"
+      ],
+      "tags": [
+        "malware",
+        "apt",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-sophos",
+      "name": "Sophos X-Ops",
+      "domain": "sophos.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "threat_intel",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel"
+      ],
+      "tags": [
+        "malware",
+        "ransomware",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-rapid7",
+      "name": "Rapid7",
+      "domain": "rapid7.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "security_research",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "vulnerability"
+      ],
+      "tags": [
+        "vulnerability",
+        "metasploit",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-tenable",
+      "name": "Tenable",
+      "domain": "tenable.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "security_research",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "vulnerability"
+      ],
+      "tags": [
+        "vulnerability",
+        "exposure",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-ncc",
+      "name": "NCC Group Research",
+      "domain": "research.nccgroup.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "vulnerability"
+      ],
+      "regions": [
+        "global",
+        "europe"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "vulnerability"
+      ],
+      "tags": [
+        "research",
+        "exploit",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-quarkslab",
+      "name": "Quarkslab",
+      "domain": "quarkslab.com",
+      "path": "",
+      "type": "research_company",
+      "categories": [
+        "security_research",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global",
+        "europe"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "reverse_engineering"
+      ],
+      "tags": [
+        "reverse-engineering",
+        "malware",
+        "cryptography"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-synacktiv",
+      "name": "Synacktiv",
+      "domain": "synacktiv.com",
+      "path": "",
+      "type": "research_company",
+      "categories": [
+        "security_research",
+        "offensive_security"
+      ],
+      "regions": [
+        "global",
+        "europe"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "offensive_security"
+      ],
+      "tags": [
+        "pentesting",
+        "research",
+        "hardware",
+        "exploit"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-qianxin",
+      "name": "QiAnXin",
+      "domain": "qianxin.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "chinese_research"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel"
+      ],
+      "tags": [
+        "china",
+        "apt",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-360netlab",
+      "name": "360 NetLab",
+      "domain": "netlab.360.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "chinese_research",
+        "network"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "network_threat_intel"
+      ],
+      "tags": [
+        "botnet",
+        "dns",
+        "network",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-antiy",
+      "name": "Antiy",
+      "domain": "antiy.net",
+      "path": "",
+      "type": "research_company",
+      "categories": [
+        "security_research",
+        "malware",
+        "chinese_research"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "malware"
+      ],
+      "tags": [
+        "malware",
+        "china",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-darknavy",
+      "name": "DARKNAVY",
+      "domain": "",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "chinese_research"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 3,
+      "role": [
+        "research"
+      ],
+      "tags": [
+        "china",
+        "security-research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-freebuf",
+      "name": "FreeBuf",
+      "domain": "freebuf.com",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "chinese_research",
+        "community"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "research_discovery"
+      ],
+      "tags": [
+        "china",
+        "security",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-anquanke",
+      "name": "Anquanke / 安全客",
+      "domain": "anquanke.com",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "chinese_research",
+        "community"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "research_discovery"
+      ],
+      "tags": [
+        "china",
+        "security",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-t00ls",
+      "name": "T00ls",
+      "domain": "t00ls.com",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "chinese_research",
+        "community"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "technical_discussion"
+      ],
+      "tags": [
+        "china",
+        "security",
+        "offensive-security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-seebug",
+      "name": "Seebug",
+      "domain": "seebug.org",
+      "path": "",
+      "type": "vulnerability_community",
+      "categories": [
+        "chinese_research",
+        "vulnerability"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 4,
+      "role": [
+        "vulnerability",
+        "community"
+      ],
+      "tags": [
+        "china",
+        "vulnerability",
+        "exploit"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "china-kanxue",
+      "name": "Kanxue / 看雪",
+      "domain": "kanxue.com",
+      "path": "",
+      "type": "reverse_engineering_community",
+      "categories": [
+        "chinese_research",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "china"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "reverse_engineering"
+      ],
+      "tags": [
+        "china",
+        "reverse-engineering",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "cis-habr",
+      "name": "Habr",
+      "domain": "habr.com",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "russia_cis",
+        "community"
+      ],
+      "regions": [
+        "europe"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "research_discovery"
+      ],
+      "tags": [
+        "russia",
+        "cis",
+        "security",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "cis-securitylab",
+      "name": "SecurityLab",
+      "domain": "securitylab.ru",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "russia_cis",
+        "security_research"
+      ],
+      "regions": [
+        "europe"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "community"
+      ],
+      "tags": [
+        "russia",
+        "cis",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "cis-positive",
+      "name": "Positive Technologies",
+      "domain": "ptsecurity.com",
+      "path": "",
+      "type": "security_company",
+      "categories": [
+        "russia_cis",
+        "security_research"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "vulnerability",
+        "enterprise_security"
+      ],
+      "tags": [
+        "security",
+        "vulnerability",
+        "pentesting",
+        "siem"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "cis-kaspersky",
+      "name": "Kaspersky Securelist",
+      "domain": "securelist.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "russia_cis",
+        "malware",
+        "security_research"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "malware_research",
+        "threat_intel"
+      ],
+      "tags": [
+        "malware",
+        "apt",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "cis-doctorweb",
+      "name": "Doctor Web",
+      "domain": "drweb.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "russia_cis",
+        "malware"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "malware_research"
+      ],
+      "tags": [
+        "malware",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-jpcert",
+      "name": "JPCERT/CC",
+      "domain": "jpcert.or.jp",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "japan",
+        "cert",
+        "operational_radar"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "vulnerability"
+      ],
+      "tags": [
+        "japan",
+        "cert",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-jpcert-eyes",
+      "name": "JPCERT/CC Eyes",
+      "domain": "jpcert.or.jp",
+      "path": "",
+      "type": "security_research",
+      "categories": [
+        "japan",
+        "security_research"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel"
+      ],
+      "tags": [
+        "japan",
+        "threat-intel",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-jvn",
+      "name": "JVN",
+      "domain": "jvn.jp",
+      "path": "",
+      "type": "vulnerability_database",
+      "categories": [
+        "japan",
+        "vulnerability"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability",
+        "operational_radar"
+      ],
+      "tags": [
+        "japan",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-ipa",
+      "name": "IPA",
+      "domain": "ipa.go.jp",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "japan",
+        "government"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "vulnerability",
+        "guidance"
+      ],
+      "tags": [
+        "japan",
+        "security",
+        "government"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-seccon",
+      "name": "SECCON",
+      "domain": "seccon.jp",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "japan",
+        "conference",
+        "ctf"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "conference",
+        "ctf"
+      ],
+      "tags": [
+        "japan",
+        "ctf",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-codeblue",
+      "name": "CODE BLUE",
+      "domain": "codeblue.jp",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "japan",
+        "conference"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research"
+      ],
+      "tags": [
+        "japan",
+        "research",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-qiita",
+      "name": "Qiita",
+      "domain": "qiita.com",
+      "path": "",
+      "type": "technical_community",
+      "categories": [
+        "japan",
+        "community",
+        "technical"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "technical_learning"
+      ],
+      "tags": [
+        "japan",
+        "programming",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "japan-zenn",
+      "name": "Zenn",
+      "domain": "zenn.dev",
+      "path": "",
+      "type": "technical_community",
+      "categories": [
+        "japan",
+        "community",
+        "technical"
+      ],
+      "regions": [
+        "japan"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "technical_learning"
+      ],
+      "tags": [
+        "japan",
+        "programming",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "korea-kisa",
+      "name": "KISA",
+      "domain": "kisa.or.kr",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "korea",
+        "government",
+        "cert"
+      ],
+      "regions": [
+        "korea"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "cert"
+      ],
+      "tags": [
+        "korea",
+        "security",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "korea-krcert",
+      "name": "KrCERT",
+      "domain": "krcert.or.kr",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "korea",
+        "cert",
+        "operational_radar"
+      ],
+      "regions": [
+        "korea"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "korea",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "korea-bob",
+      "name": "BoB Korea",
+      "domain": "kitribob.kr",
+      "path": "",
+      "type": "security_education",
+      "categories": [
+        "korea",
+        "community",
+        "education"
+      ],
+      "regions": [
+        "korea"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "community"
+      ],
+      "tags": [
+        "korea",
+        "talent",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "korea-hspace",
+      "name": "HSPACE",
+      "domain": "",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "korea",
+        "community"
+      ],
+      "regions": [
+        "korea"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "research"
+      ],
+      "tags": [
+        "korea",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "korea-theori",
+      "name": "Theori",
+      "domain": "theori.io",
+      "path": "",
+      "type": "security_company",
+      "categories": [
+        "korea",
+        "security_research"
+      ],
+      "regions": [
+        "korea",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "offensive_security"
+      ],
+      "tags": [
+        "korea",
+        "research",
+        "exploit"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "korea-s2w",
+      "name": "S2W",
+      "domain": "s2w.inc",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "korea",
+        "threat_intel"
+      ],
+      "regions": [
+        "korea",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "threat_intel",
+        "research"
+      ],
+      "tags": [
+        "korea",
+        "dark-web",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "korea-ahnlab",
+      "name": "AhnLab",
+      "domain": "ahnlab.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "korea",
+        "malware",
+        "security_research"
+      ],
+      "regions": [
+        "korea"
+      ],
+      "tier": 3,
+      "role": [
+        "malware_research",
+        "research"
+      ],
+      "tags": [
+        "korea",
+        "malware",
+        "endpoint"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-csa",
+      "name": "CSA Singapore",
+      "domain": "csa.gov.sg",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "singapore",
+        "government",
+        "cert"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "operational_radar",
+        "guidance"
+      ],
+      "tags": [
+        "singapore",
+        "cybersecurity",
+        "government"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-singcert",
+      "name": "SingCERT",
+      "domain": "csa.gov.sg",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "singapore",
+        "cert",
+        "operational_radar"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "singapore",
+        "incident-response",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-govtech",
+      "name": "GovTech",
+      "domain": "tech.gov.sg",
+      "path": "",
+      "type": "government_technology",
+      "categories": [
+        "singapore",
+        "government",
+        "security_research"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 3,
+      "role": [
+        "government",
+        "engineering",
+        "security"
+      ],
+      "tags": [
+        "singapore",
+        "government",
+        "engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-imda",
+      "name": "IMDA",
+      "domain": "imda.gov.sg",
+      "path": "",
+      "type": "government_technology",
+      "categories": [
+        "singapore",
+        "government"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "policy",
+        "technology"
+      ],
+      "tags": [
+        "singapore",
+        "telecom",
+        "technology"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-nus-security",
+      "name": "NUS Security",
+      "domain": "nus.edu.sg",
+      "path": "",
+      "type": "academic_security",
+      "categories": [
+        "singapore",
+        "academic",
+        "security_research"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "academic"
+      ],
+      "tags": [
+        "singapore",
+        "research",
+        "academia"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-star-labs",
+      "name": "STAR Labs",
+      "domain": "",
+      "path": "",
+      "type": "security_research",
+      "categories": [
+        "singapore",
+        "security_research"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "community"
+      ],
+      "tags": [
+        "singapore",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-govware",
+      "name": "GovWare",
+      "domain": "govware.sg",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "singapore",
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community",
+        "regional_network"
+      ],
+      "tags": [
+        "singapore",
+        "conference",
+        "enterprise-security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "sg-stack",
+      "name": "STACK the Flags",
+      "domain": "",
+      "path": "",
+      "type": "ctf",
+      "categories": [
+        "singapore",
+        "ctf",
+        "community"
+      ],
+      "regions": [
+        "singapore",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "ctf",
+        "community",
+        "hands_on"
+      ],
+      "tags": [
+        "singapore",
+        "ctf",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "my-cybersecurity",
+      "name": "CyberSecurity Malaysia",
+      "domain": "cybersecurity.my",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "malaysia",
+        "government",
+        "cert"
+      ],
+      "regions": [
+        "malaysia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "operational_radar"
+      ],
+      "tags": [
+        "malaysia",
+        "cybersecurity",
+        "government"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "my-mycert",
+      "name": "MyCERT",
+      "domain": "mycert.org.my",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "malaysia",
+        "cert",
+        "operational_radar"
+      ],
+      "regions": [
+        "malaysia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "malaysia",
+        "incident-response",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "my-nacsa",
+      "name": "NACSA",
+      "domain": "nacsa.gov.my",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "malaysia",
+        "government"
+      ],
+      "regions": [
+        "malaysia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "policy"
+      ],
+      "tags": [
+        "malaysia",
+        "national-security",
+        "cybersecurity"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "my-mdec",
+      "name": "MDEC",
+      "domain": "mdec.my",
+      "path": "",
+      "type": "technology_ecosystem",
+      "categories": [
+        "malaysia",
+        "technology",
+        "community"
+      ],
+      "regions": [
+        "malaysia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "ecosystem",
+        "technology"
+      ],
+      "tags": [
+        "malaysia",
+        "digital",
+        "technology"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "my-owasp-kl",
+      "name": "OWASP Kuala Lumpur",
+      "domain": "owasp.org",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "malaysia",
+        "web_security",
+        "community"
+      ],
+      "regions": [
+        "malaysia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "web_security"
+      ],
+      "tags": [
+        "malaysia",
+        "owasp",
+        "web-security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "my-hitb",
+      "name": "HITB",
+      "domain": "hitb.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "malaysia",
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "malaysia",
+        "asean",
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research",
+        "community"
+      ],
+      "tags": [
+        "malaysia",
+        "asia",
+        "conference",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "tw-twcert",
+      "name": "TWCERT/CC",
+      "domain": "twcert.org.tw",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "taiwan",
+        "cert"
+      ],
+      "regions": [
+        "taiwan"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "taiwan",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "tw-hitcon",
+      "name": "HITCON",
+      "domain": "hitcon.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "taiwan",
+        "conference",
+        "ctf"
+      ],
+      "regions": [
+        "taiwan",
+        "asia"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community",
+        "ctf"
+      ],
+      "tags": [
+        "taiwan",
+        "asia",
+        "ctf",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "tw-devcore",
+      "name": "DEVCORE",
+      "domain": "devco.re",
+      "path": "",
+      "type": "security_research",
+      "categories": [
+        "taiwan",
+        "security_research",
+        "offensive_security"
+      ],
+      "regions": [
+        "taiwan",
+        "asia"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "offensive_security"
+      ],
+      "tags": [
+        "taiwan",
+        "exploit",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "tw-teamt5",
+      "name": "TeamT5",
+      "domain": "teamt5.org",
+      "path": "",
+      "type": "security_research",
+      "categories": [
+        "taiwan",
+        "threat_intel"
+      ],
+      "regions": [
+        "taiwan",
+        "asia"
+      ],
+      "tier": 3,
+      "role": [
+        "threat_intel",
+        "research"
+      ],
+      "tags": [
+        "taiwan",
+        "apt",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "tw-cycraft",
+      "name": "CyCraft",
+      "domain": "cycraft.com",
+      "path": "",
+      "type": "security_company_research",
+      "categories": [
+        "taiwan",
+        "threat_intel",
+        "dfir"
+      ],
+      "regions": [
+        "taiwan",
+        "asia"
+      ],
+      "tier": 3,
+      "role": [
+        "threat_intel",
+        "dfir",
+        "research"
+      ],
+      "tags": [
+        "taiwan",
+        "dfir",
+        "apt"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "tw-txone",
+      "name": "TXOne",
+      "domain": "txone.com",
+      "path": "",
+      "type": "security_company",
+      "categories": [
+        "taiwan",
+        "ot_ics"
+      ],
+      "regions": [
+        "taiwan",
+        "asia",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ot_security",
+        "research"
+      ],
+      "tags": [
+        "taiwan",
+        "ics",
+        "ot",
+        "industrial"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "latam-certbr",
+      "name": "CERT.br",
+      "domain": "cert.br",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "latin_america",
+        "cert"
+      ],
+      "regions": [
+        "americas"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "brazil",
+        "cert",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "latam-nicbr",
+      "name": "NIC.br",
+      "domain": "nic.br",
+      "path": "",
+      "type": "internet_registry",
+      "categories": [
+        "latin_america",
+        "internet_measurement"
+      ],
+      "regions": [
+        "americas"
+      ],
+      "tier": 2,
+      "role": [
+        "internet_infrastructure",
+        "measurement"
+      ],
+      "tags": [
+        "brazil",
+        "internet",
+        "dns"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "latam-ekoparty",
+      "name": "Ekoparty",
+      "domain": "ekoparty.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "latin_america",
+        "conference"
+      ],
+      "regions": [
+        "americas"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community"
+      ],
+      "tags": [
+        "argentina",
+        "latin-america",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "latam-certar",
+      "name": "CERT.ar",
+      "domain": "cert.ar",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "latin_america",
+        "cert"
+      ],
+      "regions": [
+        "americas"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "argentina",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "latam-unamcert",
+      "name": "UNAM-CERT",
+      "domain": "unam.mx",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "latin_america",
+        "cert"
+      ],
+      "regions": [
+        "americas"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "education"
+      ],
+      "tags": [
+        "mexico",
+        "cert",
+        "academic"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "latam-csirt-gob",
+      "name": "CSIRT Gobierno Chile",
+      "domain": "",
+      "path": "",
+      "type": "government_cert",
+      "categories": [
+        "latin_america",
+        "cert",
+        "government"
+      ],
+      "regions": [
+        "americas"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "government"
+      ],
+      "tags": [
+        "chile",
+        "government",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "africa-africacert",
+      "name": "AfricaCERT",
+      "domain": "",
+      "path": "",
+      "type": "cert_community",
+      "categories": [
+        "africa_middle_east",
+        "cert"
+      ],
+      "regions": [
+        "africa"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "community"
+      ],
+      "tags": [
+        "africa",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "africa-africahackon",
+      "name": "AfricaHackon",
+      "domain": "",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "africa_middle_east",
+        "community"
+      ],
+      "regions": [
+        "africa"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "conference"
+      ],
+      "tags": [
+        "africa",
+        "hacking",
+        "community"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "africa-kecirt",
+      "name": "KE-CIRT/CC",
+      "domain": "",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "africa_middle_east",
+        "cert"
+      ],
+      "regions": [
+        "africa"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "kenya",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "africa-ngcert",
+      "name": "ngCERT",
+      "domain": "",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "africa_middle_east",
+        "cert"
+      ],
+      "regions": [
+        "africa"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response"
+      ],
+      "tags": [
+        "nigeria",
+        "cert"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "africa-meacs",
+      "name": "MEACS",
+      "domain": "",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "africa_middle_east",
+        "community"
+      ],
+      "regions": [
+        "africa"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "research"
+      ],
+      "tags": [
+        "africa",
+        "middle-east",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "me-checkpoint",
+      "name": "Check Point Research",
+      "domain": "research.checkpoint.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "africa_middle_east",
+        "security_research",
+        "threat_intel"
+      ],
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel"
+      ],
+      "tags": [
+        "israel",
+        "malware",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "me-team82",
+      "name": "Claroty Team82",
+      "domain": "claroty.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "africa_middle_east",
+        "ot_ics",
+        "security_research"
+      ],
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ot_security",
+        "research"
+      ],
+      "tags": [
+        "ics",
+        "ot",
+        "industrial",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "me-wiz",
+      "name": "Wiz Research",
+      "domain": "wiz.io",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "africa_middle_east",
+        "cloud_security",
+        "security_research"
+      ],
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "cloud_security",
+        "research"
+      ],
+      "tags": [
+        "cloud",
+        "vulnerability",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "me-gisec",
+      "name": "GISEC",
+      "domain": "gisecglobal.com",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "africa_middle_east",
+        "conference"
+      ],
+      "regions": [
+        "middle_east"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "regional_network"
+      ],
+      "tags": [
+        "dubai",
+        "middle-east",
+        "conference"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-mitre-attack",
+      "name": "MITRE ATT&CK",
+      "domain": "attack.mitre.org",
+      "path": "",
+      "type": "knowledgebase",
+      "categories": [
+        "blue_team",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "framework",
+        "detection",
+        "investigation"
+      ],
+      "tags": [
+        "mitre",
+        "attack",
+        "tactics",
+        "techniques"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-sigma",
+      "name": "Sigma",
+      "domain": "sigmahq.io",
+      "path": "",
+      "type": "detection_framework",
+      "categories": [
+        "blue_team",
+        "detection"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "detection",
+        "primary_material"
+      ],
+      "tags": [
+        "sigma",
+        "detection",
+        "siem"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-yara",
+      "name": "YARA",
+      "domain": "virustotal.github.io",
+      "path": "",
+      "type": "detection_framework",
+      "categories": [
+        "blue_team",
+        "malware",
+        "detection"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "malware_detection",
+        "primary_material"
+      ],
+      "tags": [
+        "yara",
+        "malware",
+        "detection"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-atomic",
+      "name": "Atomic Red Team",
+      "domain": "atomicredteam.io",
+      "path": "",
+      "type": "adversary_simulation",
+      "categories": [
+        "blue_team",
+        "red_team",
+        "detection"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "detection_validation"
+      ],
+      "tags": [
+        "atomic-red-team",
+        "mitre",
+        "detection"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-caldera",
+      "name": "MITRE Caldera",
+      "domain": "caldera.mitre.org",
+      "path": "",
+      "type": "adversary_simulation",
+      "categories": [
+        "blue_team",
+        "red_team",
+        "detection"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "adversary_emulation"
+      ],
+      "tags": [
+        "caldera",
+        "adversary-emulation",
+        "mitre"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-lolbas",
+      "name": "LOLBAS",
+      "domain": "lolbas-project.github.io",
+      "path": "",
+      "type": "knowledgebase",
+      "categories": [
+        "blue_team",
+        "windows"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "detection",
+        "reference"
+      ],
+      "tags": [
+        "lolbas",
+        "windows",
+        "living-off-the-land"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-loldrivers",
+      "name": "LOlDrivers",
+      "domain": "loldrivers.io",
+      "path": "",
+      "type": "knowledgebase",
+      "categories": [
+        "blue_team",
+        "windows"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "detection",
+        "reference"
+      ],
+      "tags": [
+        "drivers",
+        "windows",
+        "lol"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-detection-fyi",
+      "name": "Detection.fyi",
+      "domain": "detection.fyi",
+      "path": "",
+      "type": "detection_database",
+      "categories": [
+        "blue_team",
+        "detection"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "detection",
+        "research_discovery"
+      ],
+      "tags": [
+        "detection",
+        "sigma",
+        "blue-team"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-socprime",
+      "name": "SOC Prime",
+      "domain": "socprime.com",
+      "path": "",
+      "type": "detection_platform",
+      "categories": [
+        "blue_team",
+        "detection"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "detection",
+        "content"
+      ],
+      "tags": [
+        "sigma",
+        "siem",
+        "detection"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-elastic",
+      "name": "Elastic Security Labs",
+      "domain": "elastic.co",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "blue_team",
+        "detection",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "detection"
+      ],
+      "tags": [
+        "elastic",
+        "detection",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-splunk",
+      "name": "Splunk Threat Research",
+      "domain": "research.splunk.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "blue_team",
+        "detection"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "detection",
+        "research"
+      ],
+      "tags": [
+        "splunk",
+        "detection",
+        "siem"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-dfirreport",
+      "name": "DFIR Report",
+      "domain": "thedfirreport.com",
+      "path": "",
+      "type": "incident_report",
+      "categories": [
+        "blue_team",
+        "dfir",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "incident_response",
+        "case_study",
+        "detection"
+      ],
+      "tags": [
+        "dfir",
+        "incident-response",
+        "ransomware",
+        "detection"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-velociraptor",
+      "name": "Velociraptor",
+      "domain": "docs.velociraptor.app",
+      "path": "",
+      "type": "dfir_tool",
+      "categories": [
+        "blue_team",
+        "dfir"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "forensics"
+      ],
+      "tags": [
+        "dfir",
+        "endpoint",
+        "forensics"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-timesketch",
+      "name": "Timesketch",
+      "domain": "timesketch.org",
+      "path": "",
+      "type": "dfir_tool",
+      "categories": [
+        "blue_team",
+        "dfir"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "timeline_analysis"
+      ],
+      "tags": [
+        "dfir",
+        "timeline",
+        "forensics"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "blue-volatility",
+      "name": "Volatility",
+      "domain": "volatilityfoundation.org",
+      "path": "",
+      "type": "dfir_tool",
+      "categories": [
+        "blue_team",
+        "dfir",
+        "memory_forensics"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "memory_forensics"
+      ],
+      "tags": [
+        "volatility",
+        "memory",
+        "dfir"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-zeek",
+      "name": "Zeek",
+      "domain": "zeek.org",
+      "path": "",
+      "type": "network_security_tool",
+      "categories": [
+        "network",
+        "ndr",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "network_monitoring",
+        "hands_on"
+      ],
+      "tags": [
+        "zeek",
+        "network",
+        "ndr",
+        "pcap"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-suricata",
+      "name": "Suricata",
+      "domain": "suricata.io",
+      "path": "",
+      "type": "ids",
+      "categories": [
+        "network",
+        "ndr",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "ids",
+        "detection",
+        "hands_on"
+      ],
+      "tags": [
+        "suricata",
+        "ids",
+        "network",
+        "detection"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-snort",
+      "name": "Snort",
+      "domain": "snort.org",
+      "path": "",
+      "type": "ids",
+      "categories": [
+        "network",
+        "ndr",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "ids",
+        "detection",
+        "hands_on"
+      ],
+      "tags": [
+        "snort",
+        "ids",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-securityonion",
+      "name": "Security Onion",
+      "domain": "securityonionsolutions.com",
+      "path": "",
+      "type": "security_platform",
+      "categories": [
+        "network",
+        "ndr",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "network_monitoring"
+      ],
+      "tags": [
+        "security-onion",
+        "zeek",
+        "suricata",
+        "soc"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-arkime",
+      "name": "Arkime",
+      "domain": "arkime.com",
+      "path": "",
+      "type": "network_analysis",
+      "categories": [
+        "network",
+        "ndr"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "pcap",
+        "network_analysis"
+      ],
+      "tags": [
+        "arkime",
+        "pcap",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-wireshark",
+      "name": "Wireshark",
+      "domain": "wireshark.org",
+      "path": "",
+      "type": "network_analysis",
+      "categories": [
+        "network",
+        "ndr",
+        "dfir"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "pcap",
+        "network_analysis",
+        "hands_on"
+      ],
+      "tags": [
+        "wireshark",
+        "pcap",
+        "network",
+        "protocol"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-corelight",
+      "name": "Corelight",
+      "domain": "corelight.com",
+      "path": "",
+      "type": "network_security",
+      "categories": [
+        "network",
+        "ndr"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "network_detection",
+        "research"
+      ],
+      "tags": [
+        "zeek",
+        "ndr",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-shadowserver",
+      "name": "Shadowserver",
+      "domain": "shadowserver.org",
+      "path": "",
+      "type": "internet_observation",
+      "categories": [
+        "network",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "internet_observation",
+        "threat_intel"
+      ],
+      "tags": [
+        "internet",
+        "scanning",
+        "botnet",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-greynoise",
+      "name": "GreyNoise",
+      "domain": "greynoise.io",
+      "path": "",
+      "type": "internet_observation",
+      "categories": [
+        "network",
+        "threat_intel",
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "internet_observation",
+        "triangulation"
+      ],
+      "tags": [
+        "scanning",
+        "ip",
+        "internet-noise",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-censys",
+      "name": "Censys",
+      "domain": "censys.com",
+      "path": "",
+      "type": "internet_observation",
+      "categories": [
+        "network",
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "internet_observation",
+        "osint"
+      ],
+      "tags": [
+        "internet",
+        "hosts",
+        "certificates",
+        "attack-surface"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-shodan",
+      "name": "Shodan",
+      "domain": "shodan.io",
+      "path": "",
+      "type": "internet_observation",
+      "categories": [
+        "network",
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "internet_observation",
+        "osint"
+      ],
+      "tags": [
+        "internet",
+        "hosts",
+        "services",
+        "attack-surface"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-caida",
+      "name": "CAIDA",
+      "domain": "caida.org",
+      "path": "",
+      "type": "internet_measurement",
+      "categories": [
+        "network",
+        "internet_measurement"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "measurement",
+        "research"
+      ],
+      "tags": [
+        "internet",
+        "measurement",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-ripe",
+      "name": "RIPE NCC",
+      "domain": "ripe.net",
+      "path": "",
+      "type": "internet_registry",
+      "categories": [
+        "network",
+        "internet_measurement"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "internet_infrastructure",
+        "measurement"
+      ],
+      "tags": [
+        "bgp",
+        "routing",
+        "internet"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-apnic",
+      "name": "APNIC",
+      "domain": "apnic.net",
+      "path": "",
+      "type": "internet_registry",
+      "categories": [
+        "network",
+        "internet_measurement",
+        "asia"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "tier": 2,
+      "role": [
+        "internet_infrastructure",
+        "measurement"
+      ],
+      "tags": [
+        "asia",
+        "ip",
+        "internet",
+        "routing"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-isc",
+      "name": "Internet Storm Center",
+      "domain": "isc.sans.edu",
+      "path": "",
+      "type": "threat_intel",
+      "categories": [
+        "network",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "network_signal",
+        "threat_intel"
+      ],
+      "tags": [
+        "isc",
+        "network",
+        "scanning",
+        "threats"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "network-urlscan",
+      "name": "URLScan",
+      "domain": "urlscan.io",
+      "path": "",
+      "type": "url_analysis",
+      "categories": [
+        "network",
+        "osint",
+        "ioc"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "url_analysis",
+        "ioc",
+        "osint"
+      ],
+      "tags": [
+        "url",
+        "web",
+        "ioc",
+        "phishing"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-opensecuritytraining",
+      "name": "OpenSecurityTraining2",
+      "domain": "opensecuritytraining.info",
+      "path": "",
+      "type": "security_education",
+      "categories": [
+        "malware",
+        "reverse_engineering",
+        "education"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "reverse_engineering"
+      ],
+      "tags": [
+        "assembly",
+        "reverse-engineering",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-ghidra",
+      "name": "Ghidra",
+      "domain": "ghidra-sre.org",
+      "path": "",
+      "type": "reverse_engineering_tool",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "reverse_engineering"
+      ],
+      "tags": [
+        "ghidra",
+        "reverse-engineering",
+        "binary-analysis"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-rizin",
+      "name": "Rizin",
+      "domain": "rizin.re",
+      "path": "",
+      "type": "reverse_engineering_tool",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "reverse_engineering"
+      ],
+      "tags": [
+        "rizin",
+        "binary-analysis",
+        "reverse-engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-cutter",
+      "name": "Cutter",
+      "domain": "cutter.re",
+      "path": "",
+      "type": "reverse_engineering_tool",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "reverse_engineering"
+      ],
+      "tags": [
+        "cutter",
+        "rizin",
+        "reverse-engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-x64dbg",
+      "name": "x64dbg",
+      "domain": "x64dbg.com",
+      "path": "",
+      "type": "debugger",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "debugging"
+      ],
+      "tags": [
+        "debugger",
+        "windows",
+        "reverse-engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-frida",
+      "name": "Frida",
+      "domain": "frida.re",
+      "path": "",
+      "type": "dynamic_instrumentation",
+      "categories": [
+        "malware",
+        "reverse_engineering",
+        "mobile"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "instrumentation"
+      ],
+      "tags": [
+        "frida",
+        "instrumentation",
+        "mobile",
+        "dynamic-analysis"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-angr",
+      "name": "angr",
+      "domain": "angr.io",
+      "path": "",
+      "type": "binary_analysis_framework",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "binary_analysis"
+      ],
+      "tags": [
+        "angr",
+        "symbolic-execution",
+        "binary-analysis"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "re-malwareunicorn",
+      "name": "Malware Unicorn",
+      "domain": "malwareunicorn.org",
+      "path": "",
+      "type": "security_education",
+      "categories": [
+        "malware",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "education",
+        "malware_research"
+      ],
+      "tags": [
+        "malware",
+        "reverse-engineering",
+        "training"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-owasp",
+      "name": "OWASP",
+      "domain": "owasp.org",
+      "path": "",
+      "type": "security_organization",
+      "categories": [
+        "web_security",
+        "application_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "standards",
+        "research",
+        "education"
+      ],
+      "tags": [
+        "owasp",
+        "web-security",
+        "appsec"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-portswigger",
+      "name": "PortSwigger Web Security Academy",
+      "domain": "portswigger.net",
+      "path": "",
+      "type": "security_academy",
+      "categories": [
+        "web_security",
+        "bug_bounty",
+        "hands_on"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "education",
+        "hands_on",
+        "labs"
+      ],
+      "tags": [
+        "web-security",
+        "burp",
+        "labs",
+        "bug-bounty"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-hacktricks",
+      "name": "HackTricks",
+      "domain": "hacktricks.xyz",
+      "path": "",
+      "type": "knowledgebase",
+      "categories": [
+        "web_security",
+        "offensive_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "reference",
+        "hands_on"
+      ],
+      "tags": [
+        "pentesting",
+        "web-security",
+        "red-team"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-payloads",
+      "name": "PayloadsAllTheThings",
+      "domain": "github.com",
+      "path": "",
+      "type": "knowledgebase",
+      "categories": [
+        "web_security",
+        "offensive_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "reference",
+        "primary_material"
+      ],
+      "tags": [
+        "payloads",
+        "web",
+        "pentesting"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-projectdiscovery",
+      "name": "ProjectDiscovery",
+      "domain": "projectdiscovery.io",
+      "path": "",
+      "type": "security_tooling",
+      "categories": [
+        "web_security",
+        "recon"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "recon"
+      ],
+      "tags": [
+        "recon",
+        "bug-bounty",
+        "security-tools"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-nuclei",
+      "name": "Nuclei",
+      "domain": "github.com",
+      "path": "",
+      "type": "vulnerability_scanner",
+      "categories": [
+        "web_security",
+        "detection",
+        "recon"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "vulnerability_testing"
+      ],
+      "tags": [
+        "nuclei",
+        "templates",
+        "web-security",
+        "scanner"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-hackerone",
+      "name": "HackerOne",
+      "domain": "hackerone.com",
+      "path": "",
+      "type": "bug_bounty_platform",
+      "categories": [
+        "web_security",
+        "bug_bounty"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "bug_bounty",
+        "community"
+      ],
+      "tags": [
+        "bug-bounty",
+        "vulnerability",
+        "disclosure"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-bugcrowd",
+      "name": "Bugcrowd",
+      "domain": "bugcrowd.com",
+      "path": "",
+      "type": "bug_bounty_platform",
+      "categories": [
+        "web_security",
+        "bug_bounty"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "bug_bounty",
+        "community"
+      ],
+      "tags": [
+        "bug-bounty",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-intigriti",
+      "name": "Intigriti",
+      "domain": "intigriti.com",
+      "path": "",
+      "type": "bug_bounty_platform",
+      "categories": [
+        "web_security",
+        "bug_bounty"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "bug_bounty",
+        "community"
+      ],
+      "tags": [
+        "bug-bounty",
+        "europe"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-yeswehack",
+      "name": "YesWeHack",
+      "domain": "yeswehack.com",
+      "path": "",
+      "type": "bug_bounty_platform",
+      "categories": [
+        "web_security",
+        "bug_bounty"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "bug_bounty",
+        "community"
+      ],
+      "tags": [
+        "bug-bounty",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-google-vrp",
+      "name": "Google VRP",
+      "domain": "google.com",
+      "path": "",
+      "type": "vulnerability_program",
+      "categories": [
+        "web_security",
+        "bug_bounty"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "vulnerability_disclosure",
+        "bug_bounty"
+      ],
+      "tags": [
+        "google",
+        "vrp",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "web-msrc",
+      "name": "Microsoft MSRC",
+      "domain": "microsoft.com",
+      "path": "",
+      "type": "vulnerability_program",
+      "categories": [
+        "web_security",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability_disclosure",
+        "operational_radar"
+      ],
+      "tags": [
+        "microsoft",
+        "vulnerability",
+        "disclosure"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-owasp-genai",
+      "name": "OWASP GenAI Security",
+      "domain": "owasp.org",
+      "path": "",
+      "type": "ai_security",
+      "categories": [
+        "ai_security",
+        "application_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "framework",
+        "research",
+        "guidance"
+      ],
+      "tags": [
+        "genai",
+        "llm",
+        "application-security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-mitre-atlas",
+      "name": "MITRE ATLAS",
+      "domain": "atlas.mitre.org",
+      "path": "",
+      "type": "ai_security_framework",
+      "categories": [
+        "ai_security",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "framework",
+        "threat_modeling"
+      ],
+      "tags": [
+        "ai",
+        "ml",
+        "adversarial",
+        "mitre"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-deepmind",
+      "name": "Google DeepMind Research",
+      "domain": "deepmind.google",
+      "path": "",
+      "type": "academic_research",
+      "categories": [
+        "ai_security",
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "ai"
+      ],
+      "tags": [
+        "ai",
+        "machine-learning",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-anthropic",
+      "name": "Anthropic Research",
+      "domain": "anthropic.com",
+      "path": "",
+      "type": "ai_security_research",
+      "categories": [
+        "ai_security",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "ai_security"
+      ],
+      "tags": [
+        "llm",
+        "ai-safety",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-openai-security",
+      "name": "OpenAI Security",
+      "domain": "openai.com",
+      "path": "",
+      "type": "ai_security_research",
+      "categories": [
+        "ai_security",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "ai_security"
+      ],
+      "tags": [
+        "ai",
+        "llm",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-hiddenlayer",
+      "name": "HiddenLayer",
+      "domain": "hiddenlayer.com",
+      "path": "",
+      "type": "ai_security_company",
+      "categories": [
+        "ai_security",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ai_security",
+        "research"
+      ],
+      "tags": [
+        "ml-security",
+        "ai",
+        "threats"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-protectai",
+      "name": "Protect AI",
+      "domain": "protectai.com",
+      "path": "",
+      "type": "ai_security_company",
+      "categories": [
+        "ai_security",
+        "ml_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ai_security",
+        "research"
+      ],
+      "tags": [
+        "ml",
+        "ai-security",
+        "supply-chain"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-village",
+      "name": "AI Village",
+      "domain": "",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "ai_security",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "research",
+        "experimentation"
+      ],
+      "tags": [
+        "ai",
+        "security",
+        "defcon"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ics-dragos",
+      "name": "Dragos",
+      "domain": "dragos.com",
+      "path": "",
+      "type": "ot_security_company",
+      "categories": [
+        "ot_ics",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ot_security",
+        "threat_intel",
+        "research"
+      ],
+      "tags": [
+        "ics",
+        "ot",
+        "industrial",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ics-claroty",
+      "name": "Claroty",
+      "domain": "claroty.com",
+      "path": "",
+      "type": "ot_security_company",
+      "categories": [
+        "ot_ics",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ot_security",
+        "research"
+      ],
+      "tags": [
+        "ics",
+        "ot",
+        "industrial"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ics-nozomi",
+      "name": "Nozomi Networks",
+      "domain": "nozominetworks.com",
+      "path": "",
+      "type": "ot_security_company",
+      "categories": [
+        "ot_ics",
+        "network"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ot_security",
+        "network_monitoring"
+      ],
+      "tags": [
+        "ics",
+        "ot",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ics-cisa",
+      "name": "CISA ICS",
+      "domain": "cisa.gov",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "ot_ics",
+        "government"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "operational_radar",
+        "guidance"
+      ],
+      "tags": [
+        "ics",
+        "ot",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ics-kaspersky",
+      "name": "Kaspersky ICS CERT",
+      "domain": "kaspersky.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "ot_ics",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "ot_security",
+        "malware_research"
+      ],
+      "tags": [
+        "ics",
+        "ot",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ics-txone",
+      "name": "TXOne",
+      "domain": "txone.com",
+      "path": "",
+      "type": "ot_security_company",
+      "categories": [
+        "ot_ics",
+        "security_research"
+      ],
+      "regions": [
+        "global",
+        "taiwan"
+      ],
+      "tier": 3,
+      "role": [
+        "ot_security",
+        "research"
+      ],
+      "tags": [
+        "ics",
+        "ot",
+        "industrial"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ics-forescout",
+      "name": "Forescout Research",
+      "domain": "forescout.com",
+      "path": "",
+      "type": "research_team",
+      "categories": [
+        "ot_ics",
+        "security_research",
+        "network"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "ot_security",
+        "network"
+      ],
+      "tags": [
+        "ics",
+        "iot",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-researchgate",
+      "name": "ResearchGate",
+      "domain": "researchgate.net",
+      "path": "",
+      "type": "academic_platform",
+      "categories": [
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "research_discovery",
+        "academic"
+      ],
+      "tags": [
+        "papers",
+        "research",
+        "academia"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-scholar",
+      "name": "Google Scholar",
+      "domain": "scholar.google.com",
+      "path": "",
+      "type": "academic_search",
+      "categories": [
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "research_discovery",
+        "literature_search"
+      ],
+      "tags": [
+        "papers",
+        "research",
+        "literature"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-arxiv",
+      "name": "arXiv",
+      "domain": "arxiv.org",
+      "path": "",
+      "type": "academic_repository",
+      "categories": [
+        "academic",
+        "primary_material"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "research"
+      ],
+      "tags": [
+        "papers",
+        "preprint",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-ieee",
+      "name": "IEEE Xplore",
+      "domain": "ieeexplore.ieee.org",
+      "path": "",
+      "type": "academic_repository",
+      "categories": [
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "research"
+      ],
+      "tags": [
+        "ieee",
+        "papers",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-acm",
+      "name": "ACM Digital Library",
+      "domain": "dl.acm.org",
+      "path": "",
+      "type": "academic_repository",
+      "categories": [
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "research"
+      ],
+      "tags": [
+        "acm",
+        "papers",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-usenix",
+      "name": "USENIX",
+      "domain": "usenix.org",
+      "path": "",
+      "type": "academic_organization",
+      "categories": [
+        "academic",
+        "conference"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "research",
+        "conference",
+        "primary_material"
+      ],
+      "tags": [
+        "systems",
+        "security",
+        "papers"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-ndss",
+      "name": "NDSS",
+      "domain": "ndss-symposium.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "academic",
+        "conference"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "research",
+        "conference"
+      ],
+      "tags": [
+        "security",
+        "research",
+        "papers"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-ccs",
+      "name": "ACM CCS",
+      "domain": "acm.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "academic",
+        "conference"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "research",
+        "conference"
+      ],
+      "tags": [
+        "security",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-ieeesp",
+      "name": "IEEE S&P",
+      "domain": "ieee-security.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "academic",
+        "conference"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "research",
+        "conference"
+      ],
+      "tags": [
+        "security",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-pets",
+      "name": "PETS",
+      "domain": "petsymposium.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "academic",
+        "privacy"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "research",
+        "privacy"
+      ],
+      "tags": [
+        "privacy",
+        "security",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-semanticscholar",
+      "name": "Semantic Scholar",
+      "domain": "semanticscholar.org",
+      "path": "",
+      "type": "academic_search",
+      "categories": [
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "research_discovery",
+        "literature_search"
+      ],
+      "tags": [
+        "papers",
+        "research",
+        "literature"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "academic-dblp",
+      "name": "DBLP",
+      "domain": "dblp.org",
+      "path": "",
+      "type": "academic_index",
+      "categories": [
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "research_discovery",
+        "bibliography"
+      ],
+      "tags": [
+        "papers",
+        "bibliography",
+        "computer-science"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-awesome",
+      "name": "Awesome Cybersecurity Conferences",
+      "domain": "github.com",
+      "path": "",
+      "type": "conference_directory",
+      "categories": [
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference_discovery"
+      ],
+      "tags": [
+        "conference",
+        "security",
+        "events"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-blackhat",
+      "name": "Black Hat",
+      "domain": "blackhat.com",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research",
+        "networking"
+      ],
+      "tags": [
+        "black-hat",
+        "research",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-defcon",
+      "name": "DEF CON",
+      "domain": "defcon.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community",
+        "research"
+      ],
+      "tags": [
+        "defcon",
+        "hacking",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-bsides",
+      "name": "BSides",
+      "domain": "securitybsides.org",
+      "path": "",
+      "type": "conference_network",
+      "categories": [
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community",
+        "networking"
+      ],
+      "tags": [
+        "bsides",
+        "community",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-rsa",
+      "name": "RSA Conference",
+      "domain": "rsaconference.com",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "enterprise_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "enterprise",
+        "networking"
+      ],
+      "tags": [
+        "rsa",
+        "enterprise",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-troopers",
+      "name": "TROOPERS",
+      "domain": "troopers.de",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "research"
+      ],
+      "regions": [
+        "europe"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research"
+      ],
+      "tags": [
+        "europe",
+        "research",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-nullcon",
+      "name": "Nullcon",
+      "domain": "nullcon.net",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community"
+      ],
+      "tags": [
+        "india",
+        "asia",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-recon",
+      "name": "REcon",
+      "domain": "recon.cx",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "reverse_engineering"
+      ],
+      "tags": [
+        "reverse-engineering",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-poc",
+      "name": "POC Conference",
+      "domain": "powerofcommunity.net",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "research"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "research"
+      ],
+      "tags": [
+        "asia",
+        "exploit",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-rootcon",
+      "name": "ROOTCON",
+      "domain": "rootcon.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "community"
+      ],
+      "regions": [
+        "asia"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community"
+      ],
+      "tags": [
+        "philippines",
+        "asia",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-htb",
+      "name": "Hack The Box",
+      "domain": "hackthebox.com",
+      "path": "",
+      "type": "ctf_platform",
+      "categories": [
+        "ctf",
+        "hands_on"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "ctf",
+        "lab"
+      ],
+      "tags": [
+        "ctf",
+        "pentesting",
+        "red-team",
+        "blue-team"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-thm",
+      "name": "TryHackMe",
+      "domain": "tryhackme.com",
+      "path": "",
+      "type": "lab_platform",
+      "categories": [
+        "ctf",
+        "hands_on"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "education",
+        "lab"
+      ],
+      "tags": [
+        "ctf",
+        "learning",
+        "soc",
+        "pentesting"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-cyberdefenders",
+      "name": "CyberDefenders",
+      "domain": "cyberdefenders.org",
+      "path": "",
+      "type": "dfir_lab_platform",
+      "categories": [
+        "ctf",
+        "dfir",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "dfir",
+        "soc"
+      ],
+      "tags": [
+        "dfir",
+        "soc",
+        "blue-team",
+        "pcap"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-btlo",
+      "name": "Blue Team Labs Online",
+      "domain": "blueteamlabs.online",
+      "path": "",
+      "type": "blue_team_lab",
+      "categories": [
+        "ctf",
+        "blue_team"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "blue_team",
+        "soc"
+      ],
+      "tags": [
+        "blue-team",
+        "soc",
+        "dfir",
+        "detection"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-letsdefend",
+      "name": "LetsDefend",
+      "domain": "letsdefend.io",
+      "path": "",
+      "type": "soc_lab_platform",
+      "categories": [
+        "ctf",
+        "blue_team",
+        "soc"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "soc",
+        "education"
+      ],
+      "tags": [
+        "soc",
+        "siem",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-pentestacademy",
+      "name": "PortSwigger Academy",
+      "domain": "portswigger.net",
+      "path": "",
+      "type": "security_lab",
+      "categories": [
+        "ctf",
+        "web_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "web_security"
+      ],
+      "tags": [
+        "web",
+        "labs",
+        "burp"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-pentesterlab",
+      "name": "PentesterLab",
+      "domain": "pentesterlab.com",
+      "path": "",
+      "type": "security_lab",
+      "categories": [
+        "ctf",
+        "web_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "web_security"
+      ],
+      "tags": [
+        "web",
+        "pentesting",
+        "labs"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-rootme",
+      "name": "Root Me",
+      "domain": "root-me.org",
+      "path": "",
+      "type": "ctf_platform",
+      "categories": [
+        "ctf",
+        "hands_on"
+      ],
+      "regions": [
+        "global",
+        "europe"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "ctf"
+      ],
+      "tags": [
+        "ctf",
+        "reverse-engineering",
+        "web",
+        "network"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-overthewire",
+      "name": "OverTheWire",
+      "domain": "overthewire.org",
+      "path": "",
+      "type": "ctf_platform",
+      "categories": [
+        "ctf",
+        "linux"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "education"
+      ],
+      "tags": [
+        "linux",
+        "ctf",
+        "command-line"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-pwncollege",
+      "name": "pwn.college",
+      "domain": "pwn.college",
+      "path": "",
+      "type": "security_education",
+      "categories": [
+        "ctf",
+        "exploit_development"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "education"
+      ],
+      "tags": [
+        "pwn",
+        "binary",
+        "exploit-development"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-ctftime",
+      "name": "CTFtime",
+      "domain": "ctftime.org",
+      "path": "",
+      "type": "ctf_directory",
+      "categories": [
+        "ctf",
+        "community"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "ctf_discovery",
+        "community"
+      ],
+      "tags": [
+        "ctf",
+        "competitions",
+        "teams"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-pico",
+      "name": "PicoCTF",
+      "domain": "picoctf.org",
+      "path": "",
+      "type": "ctf_platform",
+      "categories": [
+        "ctf",
+        "education"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "education"
+      ],
+      "tags": [
+        "ctf",
+        "beginner",
+        "education"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-bellingcat",
+      "name": "Bellingcat",
+      "domain": "bellingcat.com",
+      "path": "",
+      "type": "osint_research",
+      "categories": [
+        "osint",
+        "investigation"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "investigation",
+        "research"
+      ],
+      "tags": [
+        "osint",
+        "investigation",
+        "geolocation"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-inteltechniques",
+      "name": "IntelTechniques",
+      "domain": "inteltechniques.com",
+      "path": "",
+      "type": "osint_toolkit",
+      "categories": [
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "osint",
+        "investigation"
+      ],
+      "tags": [
+        "osint",
+        "investigation",
+        "search"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-maltego",
+      "name": "Maltego",
+      "domain": "maltego.com",
+      "path": "",
+      "type": "osint_platform",
+      "categories": [
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "osint",
+        "investigation"
+      ],
+      "tags": [
+        "osint",
+        "graph",
+        "investigation"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-spiderfoot",
+      "name": "SpiderFoot",
+      "domain": "spiderfoot.net",
+      "path": "",
+      "type": "osint_tool",
+      "categories": [
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "osint"
+      ],
+      "tags": [
+        "osint",
+        "automation",
+        "recon"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-misp",
+      "name": "MISP",
+      "domain": "misp-project.org",
+      "path": "",
+      "type": "threat_intel_platform",
+      "categories": [
+        "osint",
+        "threat_intel",
+        "ioc"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "ioc",
+        "threat_intel",
+        "hands_on"
+      ],
+      "tags": [
+        "misp",
+        "ioc",
+        "threat-intel"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-opencti",
+      "name": "OpenCTI",
+      "domain": "filigran.io",
+      "path": "",
+      "type": "threat_intel_platform",
+      "categories": [
+        "osint",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "threat_intel",
+        "knowledge_graph"
+      ],
+      "tags": [
+        "cti",
+        "threat-intel",
+        "graph"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-securitytrails",
+      "name": "SecurityTrails",
+      "domain": "securitytrails.com",
+      "path": "",
+      "type": "internet_observation",
+      "categories": [
+        "osint",
+        "network"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "osint",
+        "dns",
+        "attack_surface"
+      ],
+      "tags": [
+        "dns",
+        "domains",
+        "osint"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "osint-dnsdumpster",
+      "name": "DNSDumpster",
+      "domain": "dnsdumpster.com",
+      "path": "",
+      "type": "dns_osint",
+      "categories": [
+        "osint",
+        "network"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "osint",
+        "recon"
+      ],
+      "tags": [
+        "dns",
+        "recon",
+        "domains"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mail-osssecurity",
+      "name": "Openwall oss-security",
+      "domain": "openwall.com",
+      "path": "",
+      "type": "mailing_list",
+      "categories": [
+        "mailing_lists",
+        "linux",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability_signal",
+        "primary_source"
+      ],
+      "tags": [
+        "oss",
+        "linux",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mail-full-disclosure",
+      "name": "Full Disclosure",
+      "domain": "",
+      "path": "",
+      "type": "mailing_list",
+      "categories": [
+        "mailing_lists",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "vulnerability_signal",
+        "community"
+      ],
+      "tags": [
+        "vulnerability",
+        "disclosure"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mail-bugtraq",
+      "name": "Bugtraq",
+      "domain": "",
+      "path": "",
+      "type": "mailing_list",
+      "categories": [
+        "mailing_lists",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "vulnerability_signal",
+        "historical_reference"
+      ],
+      "tags": [
+        "vulnerability",
+        "disclosure"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mail-linux-security",
+      "name": "Linux Kernel Security",
+      "domain": "kernel.org",
+      "path": "",
+      "type": "mailing_list",
+      "categories": [
+        "mailing_lists",
+        "linux",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability",
+        "linux_security"
+      ],
+      "tags": [
+        "linux",
+        "kernel",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mail-ossfuzz",
+      "name": "OSS-Fuzz",
+      "domain": "google.github.io",
+      "path": "",
+      "type": "fuzzing_project",
+      "categories": [
+        "mailing_lists",
+        "software_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "fuzzing",
+        "vulnerability_discovery"
+      ],
+      "tags": [
+        "fuzzing",
+        "oss",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-owasp",
+      "name": "OWASP Mobile Application Security",
+      "domain": "owasp.org",
+      "path": "",
+      "type": "security_framework",
+      "categories": [
+        "mobile",
+        "application_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "framework",
+        "education"
+      ],
+      "tags": [
+        "mobile",
+        "android",
+        "ios",
+        "appsec"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-mobsf",
+      "name": "MobSF",
+      "domain": "mobsf.github.io",
+      "path": "",
+      "type": "mobile_security_tool",
+      "categories": [
+        "mobile",
+        "application_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "mobile_analysis"
+      ],
+      "tags": [
+        "android",
+        "ios",
+        "mobile",
+        "static-analysis"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-objection",
+      "name": "Objection",
+      "domain": "github.com",
+      "path": "",
+      "type": "mobile_security_tool",
+      "categories": [
+        "mobile",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "mobile_analysis"
+      ],
+      "tags": [
+        "mobile",
+        "frida",
+        "dynamic-analysis"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-android-security",
+      "name": "Android Security",
+      "domain": "source.android.com",
+      "path": "",
+      "type": "security_documentation",
+      "categories": [
+        "mobile",
+        "android"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "reference",
+        "security_research"
+      ],
+      "tags": [
+        "android",
+        "mobile",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-android-bulletins",
+      "name": "Android Security Bulletins",
+      "domain": "source.android.com",
+      "path": "",
+      "type": "security_advisory",
+      "categories": [
+        "mobile",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "vulnerability"
+      ],
+      "tags": [
+        "android",
+        "vulnerability",
+        "patch"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-corellium",
+      "name": "Corellium",
+      "domain": "corellium.com",
+      "path": "",
+      "type": "mobile_security_platform",
+      "categories": [
+        "mobile",
+        "reverse_engineering"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "mobile_research"
+      ],
+      "tags": [
+        "ios",
+        "android",
+        "mobile",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-nowsecure",
+      "name": "NowSecure",
+      "domain": "nowsecure.com",
+      "path": "",
+      "type": "mobile_security_company",
+      "categories": [
+        "mobile",
+        "application_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "mobile_security",
+        "research"
+      ],
+      "tags": [
+        "mobile",
+        "appsec",
+        "android",
+        "ios"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "mobile-oversecured",
+      "name": "Oversecured",
+      "domain": "oversecured.com",
+      "path": "",
+      "type": "mobile_security_company",
+      "categories": [
+        "mobile",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "mobile_security",
+        "vulnerability_research"
+      ],
+      "tags": [
+        "android",
+        "mobile",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "crypto-iacr",
+      "name": "IACR",
+      "domain": "iacr.org",
+      "path": "",
+      "type": "cryptography_organization",
+      "categories": [
+        "cryptography",
+        "academic"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "cryptography"
+      ],
+      "tags": [
+        "cryptography",
+        "research",
+        "papers"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "crypto-eprint",
+      "name": "Cryptology ePrint Archive",
+      "domain": "eprint.iacr.org",
+      "path": "",
+      "type": "academic_repository",
+      "categories": [
+        "cryptography",
+        "academic",
+        "primary_material"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "cryptography"
+      ],
+      "tags": [
+        "cryptography",
+        "papers",
+        "preprints"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "crypto-openssl",
+      "name": "OpenSSL Security",
+      "domain": "openssl.org",
+      "path": "",
+      "type": "security_advisory",
+      "categories": [
+        "cryptography",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability",
+        "primary_source"
+      ],
+      "tags": [
+        "openssl",
+        "cryptography",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "crypto-libsodium",
+      "name": "libsodium",
+      "domain": "libsodium.org",
+      "path": "",
+      "type": "cryptographic_library",
+      "categories": [
+        "cryptography",
+        "software_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_material",
+        "implementation"
+      ],
+      "tags": [
+        "cryptography",
+        "library",
+        "secure-development"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "crypto-signal",
+      "name": "Signal Blog",
+      "domain": "signal.org",
+      "path": "",
+      "type": "security_research",
+      "categories": [
+        "cryptography",
+        "privacy"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "privacy"
+      ],
+      "tags": [
+        "cryptography",
+        "privacy",
+        "messaging"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "linux-kernel",
+      "name": "Kernel.org",
+      "domain": "kernel.org",
+      "path": "",
+      "type": "open_source_project",
+      "categories": [
+        "linux",
+        "oss_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "primary_source",
+        "software_security"
+      ],
+      "tags": [
+        "linux",
+        "kernel",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "linux-redhat",
+      "name": "Red Hat Security",
+      "domain": "redhat.com",
+      "path": "",
+      "type": "security_advisory",
+      "categories": [
+        "linux",
+        "oss_security",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability",
+        "linux_security"
+      ],
+      "tags": [
+        "linux",
+        "red-hat",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "linux-ubuntu",
+      "name": "Ubuntu Security Notices",
+      "domain": "ubuntu.com",
+      "path": "",
+      "type": "security_advisory",
+      "categories": [
+        "linux",
+        "oss_security",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability",
+        "linux_security"
+      ],
+      "tags": [
+        "ubuntu",
+        "linux",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "linux-debian",
+      "name": "Debian Security",
+      "domain": "debian.org",
+      "path": "",
+      "type": "security_advisory",
+      "categories": [
+        "linux",
+        "oss_security",
+        "vulnerability"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "vulnerability",
+        "linux_security"
+      ],
+      "tags": [
+        "debian",
+        "linux",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "linux-ghsl",
+      "name": "GitHub Security Lab",
+      "domain": "securitylab.github.com",
+      "path": "",
+      "type": "security_research",
+      "categories": [
+        "linux",
+        "oss_security",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "software_security"
+      ],
+      "tags": [
+        "open-source",
+        "vulnerability",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-bssn",
+      "name": "BSSN",
+      "domain": "",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "indonesia",
+        "government",
+        "regional_radar"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "operational_radar",
+        "national_signal"
+      ],
+      "tags": [
+        "indonesia",
+        "cybersecurity",
+        "government"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-idcert",
+      "name": "ID-CERT",
+      "domain": "id-cert.or.id",
+      "path": "",
+      "type": "cert",
+      "categories": [
+        "indonesia",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "regional_signal"
+      ],
+      "tags": [
+        "indonesia",
+        "cert",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-idsirticc",
+      "name": "Id-SIRTII/CC",
+      "domain": "",
+      "path": "",
+      "type": "national_cert",
+      "categories": [
+        "indonesia",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "national_signal"
+      ],
+      "tags": [
+        "indonesia",
+        "cert",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-csirt-indonesia",
+      "name": "CSIRT Indonesia",
+      "domain": "",
+      "path": "",
+      "type": "cert_community",
+      "categories": [
+        "indonesia",
+        "cert",
+        "community"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "cert",
+        "regional_network"
+      ],
+      "tags": [
+        "indonesia",
+        "csirt",
+        "community"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-indonesia-community",
+      "name": "Indonesia Cybersecurity Community",
+      "domain": "",
+      "path": "",
+      "type": "security_community",
+      "categories": [
+        "indonesia",
+        "community",
+        "regional_radar"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "research_discovery"
+      ],
+      "tags": [
+        "indonesia",
+        "cybersecurity",
+        "community"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-indonesia-researchers",
+      "name": "Indonesia Security Researchers",
+      "domain": "",
+      "path": "",
+      "type": "researcher_network",
+      "categories": [
+        "indonesia",
+        "security_research"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "researcher_discovery",
+        "community"
+      ],
+      "tags": [
+        "indonesia",
+        "researchers",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-indonesia-events",
+      "name": "Indonesia Cybersecurity Events / CTF",
+      "domain": "",
+      "path": "",
+      "type": "event_directory",
+      "categories": [
+        "indonesia",
+        "conference",
+        "ctf"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "ctf",
+        "conference_discovery"
+      ],
+      "tags": [
+        "indonesia",
+        "ctf",
+        "conference",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-indonesia-vendors",
+      "name": "Indonesia Security Vendors",
+      "domain": "",
+      "path": "",
+      "type": "security_ecosystem",
+      "categories": [
+        "indonesia",
+        "industry"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "industry",
+        "ecosystem"
+      ],
+      "tags": [
+        "indonesia",
+        "security",
+        "vendors"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-hitcon",
+      "name": "HITCON",
+      "domain": "hitcon.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "asia"
+      ],
+      "regions": [
+        "taiwan",
+        "asia"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community",
+        "research"
+      ],
+      "tags": [
+        "taiwan",
+        "asia",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "conference-secccon",
+      "name": "SECCON",
+      "domain": "seccon.jp",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "conference",
+        "ctf",
+        "asia"
+      ],
+      "regions": [
+        "japan",
+        "asia"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "ctf",
+        "community"
+      ],
+      "tags": [
+        "japan",
+        "ctf",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    }
+  ],
+  "signals": {
+    "fediverse_hashtags": [
+      "#infosec",
+      "#cybersecurity",
+      "#threatintel",
+      "#DFIR",
+      "#malware",
+      "#reverseengineering",
+      "#blueteam",
+      "#redteam",
+      "#OSINT",
+      "#CTF",
+      "#bugbounty",
+      "#AIsecurity",
+      "#vulnerability"
+    ]
+  },
+  "researchers": [],
+  "regional_radar": {
+    "priority_order": [
+      "global",
+      "asia",
+      "asean",
+      "indonesia",
+      "singapore",
+      "malaysia",
+      "regional",
+      "global_research"
+    ],
+    "target_ecosystems": [
+      "indonesia",
+      "singapore",
+      "malaysia",
+      "asean"
+    ]
+  },
+  "weekly_radar_schema": {
+    "week": null,
+    "interesting_signals": [],
+    "most_interesting": null,
+    "why": null,
+    "investigation_question": null,
+    "sources": [],
+    "evidence": [],
+    "hands_on": [],
+    "result": null,
+    "artifact": null,
+    "publish": false
+  },
+  "health_schema": {
+    "signal": null,
+    "noise": null,
+    "activity": null,
+    "keep": null,
+    "last_checked": null,
+    "notes": null
+  },
+  "deep_investigation_schema": {
+    "required_fields": [
+      "signal",
+      "question",
+      "primary_source",
+      "triangulation",
+      "hands_on",
+      "understanding",
+      "result",
+      "artifact"
+    ],
+    "core_loop_derived_from": "radar.core_loop",
+    "notes": "result is retained as the documented outcome; artifact is the output."
+  }
+}

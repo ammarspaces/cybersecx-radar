@@ -1,0 +1,34 @@
+# Runtime files
+picker_history.json
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Local configuration / secrets
+.env
+.env.*
+*.local
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
