@@ -9682,6 +9682,1713 @@
         "last_checked": null,
         "notes": null
       }
+    },
+    {
+      "id": "regional-cert-in",
+      "name": "CERT-In",
+      "domain": "cert-in.org.in",
+      "path": "/s2cMainServlet?pageid=PUBADVLIST",
+      "type": "cert",
+      "categories": [
+        "india",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "asia",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "operational_radar",
+        "incident_response"
+      ],
+      "tags": [
+        "india",
+        "cert-in",
+        "advisories",
+        "vulnerability",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-thaicert",
+      "name": "ThaiCERT",
+      "domain": "thaicert.or.th",
+      "path": "/en/homepage/",
+      "type": "cert",
+      "categories": [
+        "thailand",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "asia",
+        "asean",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "regional_signal"
+      ],
+      "tags": [
+        "thailand",
+        "thaicert",
+        "advisories",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-certph",
+      "name": "CERT-PH / NCERT",
+      "domain": "ncert.gov.ph",
+      "path": "/about-us/ncert/",
+      "type": "cert",
+      "categories": [
+        "philippines",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "asia",
+        "asean",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "regional_signal"
+      ],
+      "tags": [
+        "philippines",
+        "cert-ph",
+        "ncert",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-hkcert",
+      "name": "HKCERT",
+      "domain": "hkcert.org",
+      "path": "/security-bulletin",
+      "type": "cert",
+      "categories": [
+        "hong_kong",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "asia",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "vulnerability_signal",
+        "incident_response"
+      ],
+      "tags": [
+        "hong-kong",
+        "hkcert",
+        "security-bulletin",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-cncert",
+      "name": "CNCERT/CC",
+      "domain": "cert.org.cn",
+      "path": "/publish/english/",
+      "type": "cert",
+      "categories": [
+        "china",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "china",
+        "asia",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "operational_radar",
+        "national_signal"
+      ],
+      "tags": [
+        "china",
+        "cncert",
+        "incident-response",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-saudi-cert",
+      "name": "Saudi CERT",
+      "domain": "nca.gov.sa",
+      "path": "/en/cert/",
+      "type": "cert",
+      "categories": [
+        "saudi_arabia",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "operational_radar",
+        "vulnerability_signal"
+      ],
+      "tags": [
+        "saudi-arabia",
+        "saudi-cert",
+        "advisories",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-qcert",
+      "name": "Q-CERT",
+      "domain": "qcert.ncsa.gov.qa",
+      "path": "/about-q-cert",
+      "type": "cert",
+      "categories": [
+        "qatar",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "regional_signal"
+      ],
+      "tags": [
+        "qatar",
+        "q-cert",
+        "incident-response",
+        "cybersecurity"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-oman-cert",
+      "name": "Oman CERT",
+      "domain": "cert.gov.om",
+      "path": "/sp/about",
+      "type": "national_cert",
+      "categories": [
+        "oman",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "middle_east",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "national_signal",
+        "incident_response"
+      ],
+      "tags": [
+        "oman",
+        "cert",
+        "incident-response",
+        "cybersecurity"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-rw-csirt",
+      "name": "Rwanda CSIRT",
+      "domain": "cyber.gov.rw",
+      "path": "/rw-csirt/",
+      "type": "cert",
+      "categories": [
+        "rwanda",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "africa",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "regional_signal"
+      ],
+      "tags": [
+        "rwanda",
+        "rw-csirt",
+        "phishing",
+        "malware",
+        "ddos"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-certmu",
+      "name": "CERT-MU",
+      "domain": "cert-mu.govmu.org",
+      "path": "/cert-mu/",
+      "type": "cert",
+      "categories": [
+        "mauritius",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "africa",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "vulnerability_signal"
+      ],
+      "tags": [
+        "mauritius",
+        "cert-mu",
+        "advisories",
+        "vulnerability",
+        "phishing"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "regional-certgh",
+      "name": "CERT-GH",
+      "domain": "csa.gov.gh",
+      "path": "/cert-gh.php",
+      "type": "cert",
+      "categories": [
+        "ghana",
+        "cert",
+        "regional_radar"
+      ],
+      "regions": [
+        "africa",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "national_signal"
+      ],
+      "tags": [
+        "ghana",
+        "cert-gh",
+        "incident-response",
+        "critical-infrastructure"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "europe-enisa",
+      "name": "ENISA",
+      "domain": "enisa.europa.eu",
+      "path": "/topics/cyber-threats/threat-landscape",
+      "type": "government_security",
+      "categories": [
+        "europe",
+        "threat_landscape",
+        "security_research"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_landscape",
+        "government"
+      ],
+      "tags": [
+        "enisa",
+        "europe",
+        "threat-landscape",
+        "cyber-threats"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "europe-cert-eu",
+      "name": "CERT-EU",
+      "domain": "cert.europa.eu",
+      "path": "/publications/security-advisories/2026",
+      "type": "cert",
+      "categories": [
+        "europe",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "operational_radar",
+        "vulnerability_signal"
+      ],
+      "tags": [
+        "cert-eu",
+        "european-union",
+        "advisories",
+        "vulnerability",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "europe-certfr",
+      "name": "CERT-FR / ANSSI",
+      "domain": "cert.ssi.gouv.fr",
+      "path": "/",
+      "type": "cert",
+      "categories": [
+        "france",
+        "cert",
+        "vulnerability",
+        "threat_intel"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "operational_radar",
+        "threat_intel"
+      ],
+      "tags": [
+        "france",
+        "anssi",
+        "cert-fr",
+        "advisories",
+        "threats"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "europe-cert-pl",
+      "name": "CERT Polska",
+      "domain": "cert.pl",
+      "path": "/en/news/",
+      "type": "cert",
+      "categories": [
+        "poland",
+        "cert",
+        "incident_response"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "vulnerability_signal"
+      ],
+      "tags": [
+        "poland",
+        "cert-polska",
+        "routeros",
+        "incident-response",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "europe-cert-at",
+      "name": "CERT.at / GovCERT Austria",
+      "domain": "govcert.gv.at",
+      "path": "/cert-warnungen.html",
+      "type": "cert",
+      "categories": [
+        "austria",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "operational_radar",
+        "vulnerability_signal"
+      ],
+      "tags": [
+        "austria",
+        "cert-at",
+        "govcert",
+        "advisories",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "europe-ccb",
+      "name": "CCB Belgium",
+      "domain": "ccb.belgium.be",
+      "path": "/resource-center",
+      "type": "government_security",
+      "categories": [
+        "belgium",
+        "government",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "europe",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "cert",
+        "operational_radar"
+      ],
+      "tags": [
+        "belgium",
+        "ccb",
+        "cert",
+        "advisories",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "apac-acsc",
+      "name": "Australian Cyber Security Centre",
+      "domain": "cyber.gov.au",
+      "path": "/about-us/view-all-content/alerts-and-advisories",
+      "type": "government_security",
+      "categories": [
+        "australia",
+        "government",
+        "cert",
+        "threat_intel"
+      ],
+      "regions": [
+        "asia",
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "operational_radar",
+        "incident_signal"
+      ],
+      "tags": [
+        "australia",
+        "acsc",
+        "alerts",
+        "advisories",
+        "threats"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "threat-shadowserver",
+      "name": "Shadowserver Foundation",
+      "domain": "shadowserver.org",
+      "path": "/",
+      "type": "internet_observation",
+      "categories": [
+        "threat_intel",
+        "network",
+        "incident_response"
+      ],
+      "regions": [
+        "global",
+        "africa",
+        "europe"
+      ],
+      "tier": 2,
+      "role": [
+        "threat_intel",
+        "network_observation",
+        "operational_radar"
+      ],
+      "tags": [
+        "shadowserver",
+        "cti",
+        "network-remediation",
+        "botnet",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "threat-spamhaus",
+      "name": "Spamhaus",
+      "domain": "spamhaus.org",
+      "path": "/resource-hub/threat-intelligence/",
+      "type": "threat_intel_platform",
+      "categories": [
+        "threat_intel",
+        "dns",
+        "abuse"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "threat_intel",
+        "ioc",
+        "operational_radar"
+      ],
+      "tags": [
+        "spamhaus",
+        "threat-intelligence",
+        "blocklists",
+        "dns",
+        "malware"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "phish-openphish",
+      "name": "OpenPhish",
+      "domain": "openphish.com",
+      "path": "/",
+      "type": "url_repository",
+      "categories": [
+        "phishing",
+        "threat_intel",
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "ioc",
+        "phishing",
+        "threat_intel"
+      ],
+      "tags": [
+        "openphish",
+        "phishing",
+        "urls",
+        "feed",
+        "intelligence"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "phish-phishtank",
+      "name": "PhishTank",
+      "domain": "phishtank.org",
+      "path": "/",
+      "type": "url_repository",
+      "categories": [
+        "phishing",
+        "osint",
+        "threat_intel"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "ioc",
+        "phishing",
+        "osint"
+      ],
+      "tags": [
+        "phishtank",
+        "phishing",
+        "urls",
+        "verification",
+        "community"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "vuln-osv",
+      "name": "OSV.dev",
+      "domain": "osv.dev",
+      "path": "/",
+      "type": "vulnerability_database",
+      "categories": [
+        "vulnerability",
+        "open_source",
+        "software_security"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "operational_radar",
+        "developer_security",
+        "primary_reference"
+      ],
+      "tags": [
+        "osv",
+        "open-source",
+        "dependencies",
+        "vulnerability",
+        "supply-chain"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ossf-scorecard",
+      "name": "OpenSSF Scorecard",
+      "domain": "openssf.org",
+      "path": "/scorecard/",
+      "type": "security_tooling",
+      "categories": [
+        "open_source",
+        "supply_chain",
+        "security_research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "software_security",
+        "supply_chain",
+        "assessment"
+      ],
+      "tags": [
+        "openssf",
+        "scorecard",
+        "open-source",
+        "supply-chain",
+        "security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ai-incidentdatabase",
+      "name": "AI Incident Database",
+      "domain": "incidentdatabase.ai",
+      "path": "/",
+      "type": "ai_security_research",
+      "categories": [
+        "ai_security",
+        "incidents",
+        "research"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "ai_security",
+        "incident_analysis"
+      ],
+      "tags": [
+        "ai",
+        "incidents",
+        "ai-safety",
+        "case-study",
+        "database"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "community-first",
+      "name": "FIRST",
+      "domain": "first.org",
+      "path": "/community",
+      "type": "security_community",
+      "categories": [
+        "incident_response",
+        "community",
+        "standards"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 4,
+      "role": [
+        "community",
+        "incident_response",
+        "standards",
+        "training"
+      ],
+      "tags": [
+        "first",
+        "csirt",
+        "incident-response",
+        "community",
+        "standards"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-huntress",
+      "name": "Huntress",
+      "domain": "huntress.com",
+      "path": "/blog-categories/threat-research",
+      "type": "research_team",
+      "categories": [
+        "security_research",
+        "threat_intel",
+        "malware"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "malware_research",
+        "threat_intel"
+      ],
+      "tags": [
+        "huntress",
+        "threat-research",
+        "malware",
+        "identity",
+        "rmm"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-groupib",
+      "name": "Group-IB",
+      "domain": "group-ib.com",
+      "path": "/blog/",
+      "type": "security_company_research",
+      "categories": [
+        "threat_intel",
+        "security_research",
+        "fraud"
+      ],
+      "regions": [
+        "global",
+        "asia",
+        "europe",
+        "americas"
+      ],
+      "tier": 3,
+      "role": [
+        "threat_intel",
+        "research",
+        "cyber_investigation"
+      ],
+      "tags": [
+        "group-ib",
+        "threat-intelligence",
+        "apt",
+        "malware",
+        "phishing",
+        "fraud"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "research-nsfocus",
+      "name": "NSFOCUS",
+      "domain": "nsfocusglobal.com",
+      "path": "/blog/",
+      "type": "research_team",
+      "categories": [
+        "china",
+        "security_research",
+        "threat_intel"
+      ],
+      "regions": [
+        "china",
+        "asia",
+        "global"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "threat_intel",
+        "apt_hunting",
+        "ai_security"
+      ],
+      "tags": [
+        "nsfocus",
+        "fuying-lab",
+        "apt",
+        "threat-hunting",
+        "ai-security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-awanpintar",
+      "name": "AwanPintar.id",
+      "domain": "awanpintar.id",
+      "path": "",
+      "type": "cyber_threat_intelligence",
+      "categories": [
+        "indonesia",
+        "threat_intel",
+        "real_time"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "threat_intel",
+        "operational_radar",
+        "indonesia_signal"
+      ],
+      "tags": [
+        "indonesia",
+        "cti",
+        "threat-intelligence",
+        "real-time",
+        "attack-map"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-awanpintar-reports",
+      "name": "AwanPintar Digital Threat Reports",
+      "domain": "awanpintar.id",
+      "path": "/publikasi/",
+      "type": "threat_report",
+      "categories": [
+        "indonesia",
+        "threat_intel",
+        "security_research"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 3,
+      "role": [
+        "threat_intel",
+        "research",
+        "primary_source"
+      ],
+      "tags": [
+        "indonesia",
+        "cti",
+        "threat-report",
+        "attack-data",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-komdigi-csirt",
+      "name": "KOMDIGI CSIRT",
+      "domain": "csirt.komdigi.go.id",
+      "path": "",
+      "type": "government_security",
+      "categories": [
+        "indonesia",
+        "government",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "government",
+        "cert",
+        "vulnerability_signal",
+        "operational_radar"
+      ],
+      "tags": [
+        "indonesia",
+        "komdigi",
+        "csirt",
+        "vulnerability",
+        "security-advisory"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-idsirtii-publications",
+      "name": "ID-SIRTII/CC Publications",
+      "domain": "idsirtii.bssn.go.id",
+      "path": "/publications/",
+      "type": "national_cert",
+      "categories": [
+        "indonesia",
+        "cert",
+        "vulnerability",
+        "threat_intel"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "primary_reference",
+        "vulnerability_signal",
+        "incident_response"
+      ],
+      "tags": [
+        "indonesia",
+        "bssn",
+        "idsirtii",
+        "security-advisory",
+        "vulnerability"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-jakarta-prov-csirt",
+      "name": "JakartaProv-CSIRT",
+      "domain": "csirt.jakarta.go.id",
+      "path": "",
+      "type": "government_cert",
+      "categories": [
+        "indonesia",
+        "government",
+        "cert",
+        "threat_intel"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "regional_signal",
+        "threat_intel",
+        "incident_response"
+      ],
+      "tags": [
+        "jakarta",
+        "indonesia",
+        "csirt",
+        "cti",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-jakarta-prov-vdp",
+      "name": "JakartaProv-CSIRT Cyber Report",
+      "domain": "csirt.jakarta.go.id",
+      "path": "/cyber-report",
+      "type": "vulnerability_disclosure",
+      "categories": [
+        "indonesia",
+        "vulnerability",
+        "bug_bounty",
+        "hands_on"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 5,
+      "role": [
+        "bug_bounty",
+        "vulnerability_reproduction",
+        "primary_material"
+      ],
+      "tags": [
+        "jakarta",
+        "vdp",
+        "bug-bounty",
+        "web-security",
+        "api-security",
+        "cvss"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      },
+      "warning": "Only perform testing within the program's explicitly authorized scope and rules. Do not access or exfiltrate data beyond what is permitted."
+    },
+    {
+      "id": "id-ojk-csirt",
+      "name": "OJK-CSIRT",
+      "domain": "ojk.go.id",
+      "path": "/id/csirt/Pages/Layanan-OJK-CSIRT.aspx",
+      "type": "sectoral_csirt",
+      "categories": [
+        "indonesia",
+        "finance",
+        "cert",
+        "incident_response"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "incident_response",
+        "vulnerability",
+        "finance_security"
+      ],
+      "tags": [
+        "indonesia",
+        "ojk",
+        "financial-sector",
+        "csirt",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-ojk-incident-guide",
+      "name": "OJK Technical Cyber Incident Guides",
+      "domain": "ojk.go.id",
+      "path": "/id/csirt/Pages/Panduan-Penanganan-Insiden-Siber.aspx",
+      "type": "incident_response_guide",
+      "categories": [
+        "indonesia",
+        "incident_response",
+        "hands_on",
+        "guidance"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 5,
+      "role": [
+        "incident_response",
+        "hands_on",
+        "primary_source",
+        "training"
+      ],
+      "tags": [
+        "indonesia",
+        "ojk",
+        "sql-injection",
+        "phishing",
+        "malware",
+        "data-breach",
+        "incident-response"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-kemenkes-csirt-info",
+      "name": "Kemenkes CSIRT Information & Advisories",
+      "domain": "csirt.kemkes.go.id",
+      "path": "/informasi/",
+      "type": "sectoral_csirt",
+      "categories": [
+        "indonesia",
+        "healthcare",
+        "cert",
+        "vulnerability"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 2,
+      "role": [
+        "cert",
+        "vulnerability_signal",
+        "healthcare_security",
+        "operational_radar"
+      ],
+      "tags": [
+        "indonesia",
+        "kemenkes",
+        "healthcare",
+        "security-advisory",
+        "csirt"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-bmkg-bugbounty-2026",
+      "name": "BMKG Bug Bounty 2026",
+      "domain": "csirt.bmkg.go.id",
+      "path": "/bug-bounty-2026",
+      "type": "bug_bounty",
+      "categories": [
+        "indonesia",
+        "bug_bounty",
+        "hands_on",
+        "vulnerability"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 5,
+      "role": [
+        "bug_bounty",
+        "hands_on",
+        "vulnerability_reproduction",
+        "security_testing"
+      ],
+      "tags": [
+        "indonesia",
+        "bmkg",
+        "bug-bounty",
+        "vdp",
+        "web-security",
+        "api-security",
+        "owasp",
+        "cvss"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      },
+      "warning": "Only perform testing within the program's explicitly authorized scope and rules. Do not access or exfiltrate data beyond what is permitted."
+    },
+    {
+      "id": "id-kemendikdasmen-bugbounty-2026",
+      "name": "Kemendikdasmen Bug Bounty 2026",
+      "domain": "amanbersama.kemendikdasmen.go.id",
+      "path": "",
+      "type": "bug_bounty",
+      "categories": [
+        "indonesia",
+        "education",
+        "bug_bounty",
+        "hands_on"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 5,
+      "role": [
+        "bug_bounty",
+        "hands_on",
+        "vulnerability_reproduction",
+        "education"
+      ],
+      "tags": [
+        "indonesia",
+        "kemendikdasmen",
+        "bug-bounty",
+        "education",
+        "web-security",
+        "cvss"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      },
+      "warning": "Only perform testing within the program's explicitly authorized scope and rules. Do not access or exfiltrate data beyond what is permitted."
+    },
+    {
+      "id": "id-idsecconf-2026",
+      "name": "IDSECCONF 2026",
+      "domain": "2026.idsecconf.org",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "indonesia",
+        "conference",
+        "security_research",
+        "community",
+        "ctf"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "community",
+        "research",
+        "ctf",
+        "research_discovery"
+      ],
+      "tags": [
+        "indonesia",
+        "idsecconf",
+        "conference",
+        "security-research",
+        "ctf",
+        "iot-security",
+        "devsecops"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-cyber-indonesia",
+      "name": "Cyber Resilience & Defense Indonesia",
+      "domain": "cyber-indonesia.id",
+      "path": "",
+      "type": "conference",
+      "categories": [
+        "indonesia",
+        "conference",
+        "industry",
+        "community"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 4,
+      "role": [
+        "conference",
+        "industry",
+        "community",
+        "research_discovery"
+      ],
+      "tags": [
+        "indonesia",
+        "cyber-resilience",
+        "conference",
+        "defense",
+        "intelligence",
+        "industry"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-ui-csc-rg-publications",
+      "name": "UI Cyber Security & Cryptography Research Group",
+      "domain": "frontiers.ui.ac.id",
+      "path": "/cscui/publication/",
+      "type": "academic_security",
+      "categories": [
+        "indonesia",
+        "academic",
+        "security_research",
+        "cryptography",
+        "digital_forensics"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "academic",
+        "primary_source",
+        "digital_forensics"
+      ],
+      "tags": [
+        "indonesia",
+        "universitas-indonesia",
+        "cybersecurity",
+        "cryptography",
+        "digital-forensics",
+        "pdp"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-ui-fairness",
+      "name": "UI FAIRNESS Security Research",
+      "domain": "scholar.ui.ac.id",
+      "path": "/en/organisations/the-center-for-advanced-integrated-system-and-network-and-embedde/publications/",
+      "type": "academic_security",
+      "categories": [
+        "indonesia",
+        "academic",
+        "security_research",
+        "network_security",
+        "embedded_security"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "academic",
+        "network_security",
+        "iot_security"
+      ],
+      "tags": [
+        "indonesia",
+        "universitas-indonesia",
+        "network-security",
+        "embedded-security",
+        "iot",
+        "research"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "id-ui-egb-security",
+      "name": "UI E-Government & E-Business Security Research",
+      "domain": "frontiers.ui.ac.id",
+      "path": "/egb/",
+      "type": "academic_security",
+      "categories": [
+        "indonesia",
+        "academic",
+        "government",
+        "security_research"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 3,
+      "role": [
+        "research",
+        "government_security",
+        "security_management",
+        "primary_source"
+      ],
+      "tags": [
+        "indonesia",
+        "universitas-indonesia",
+        "smart-government",
+        "critical-infrastructure",
+        "security-management"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
     }
   ],
   "signals": {
