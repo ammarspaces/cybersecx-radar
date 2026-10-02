@@ -179,6 +179,21 @@ TYPE_INSTRUCTIONS = {
     "vulnerability_advisory":
         "Identify affected component, root cause and remediation.",
 
+    "cyber_threat_intelligence":
+        "Trace the report from indicators to actor, campaign and supporting evidence.",
+
+    "incident_response_guide":
+        "Turn the guidance into an incident-response scenario and identify the evidence required.",
+
+    "sectoral_csirt":
+        "Treat this as sector-specific operational intelligence and verify technical claims.",
+
+    "threat_report":
+        "Reconstruct the reported activity and separate documented evidence from assessment.",
+
+    "vulnerability_disclosure":
+        "Trace the disclosure to the affected component, root cause, impact and remediation.",
+
     "vulnerability_research":
         "Trace the vulnerability to root cause and impact.",
 
@@ -202,12 +217,6 @@ TYPE_INSTRUCTIONS = {
 
     "government_security":
         "Treat the publication as an operational signal and verify technical details.",
-
-    "regulatory":
-        "Focus on implications and underlying technical issues.",
-
-    "technology_ecosystem":
-        "Use this to understand regional cybersecurity ecosystem signals.",
 
     "technology":
         "Identify the technology/security relationship.",
@@ -274,9 +283,6 @@ TYPE_INSTRUCTIONS = {
 
     "network_intelligence":
         "Look for current network signals and validate them.",
-
-    "technical_research":
-        "Understand the technical mechanism and evidence.",
 
     "vulnerability_database":
         "Cross-reference the vulnerability with other databases.",
@@ -660,6 +666,8 @@ def choose_mission(resource):
         "security_ecosystem": "signal",
         "government_security": "signal",
         "government_technology": "signal",
+        "sectoral_csirt": "signal",
+        "incident_response_guide": "research",
         "cert": "signal",
         "cert_community": "signal",
         "government_cert": "signal",
@@ -675,21 +683,22 @@ def choose_mission(resource):
         "vulnerability_community": "vulnerability",
         "vulnerability_program": "vulnerability",
         "exploit_database": "vulnerability",
+        "bug_bounty": "vulnerability",
+        "vulnerability_disclosure": "vulnerability",
         "bug_bounty_platform": "vulnerability",
-        "mobile_security_company": "vulnerability",
 
         # Malware / IOC / analysis
         "botnet_tracker": "malware",
         "ioc_database": "malware",
         "malware_analysis": "malware",
         "malware_archive": "malware",
-        "malware_knowledgebase": "malware",
         "malware_repository": "malware",
         "sandbox": "malware",
         "url_repository": "malware",
         "url_analysis": "malware",
-        "threat_intel": "malware",
         "threat_intel_platform": "malware",
+        "cyber_threat_intelligence": "malware",
+        "threat_report": "malware",
 
         # Research / primary technical material
         "academic_index": "academic",
@@ -701,7 +710,6 @@ def choose_mission(resource):
         "academic_security": "academic",
         "ai_security": "research",
         "ai_security_company": "research",
-        "ai_security_framework": "research",
         "ai_security_research": "research",
         "code_platform": "research",
         "cryptographic_library": "research",
@@ -868,6 +876,13 @@ def display_pick(resource, mission, mode):
         print(f"Link     : {url}")
     else:
         print("Link     : Search manually")
+
+    warning = resource.get("warning")
+    if warning:
+        print()
+        print("⚠ WARNING")
+        print("-" * 68)
+        print(warning)
 
     print()
     print("MISSION")
