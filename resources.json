@@ -190,6 +190,22 @@
     "malaysia": {
       "name": "Malaysia",
       "priority": "high"
+    },
+    "china": {
+      "name": "China",
+      "priority": "high"
+    },
+    "japan": {
+      "name": "Japan",
+      "priority": "high"
+    },
+    "korea": {
+      "name": "Korea",
+      "priority": "high"
+    },
+    "taiwan": {
+      "name": "Taiwan",
+      "priority": "high"
     }
   },
   "resources": [
@@ -11380,6 +11396,399 @@
         "smart-government",
         "critical-infrastructure",
         "security-management"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-hacktoria",
+      "name": "Hacktoria",
+      "domain": "hacktoria.com",
+      "path": "/",
+      "type": "ctf_platform",
+      "categories": [
+        "ctf",
+        "osint",
+        "hands_on"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "ctf",
+        "osint"
+      ],
+      "tags": [
+        "osint",
+        "story-driven",
+        "investigation",
+        "challenges",
+        "ctf"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-tcp1p",
+      "name": "TCP1P CTF",
+      "domain": "github.com",
+      "path": "/TCP1P/",
+      "type": "ctf_platform",
+      "categories": [
+        "indonesia",
+        "asean",
+        "ctf",
+        "hands_on",
+        "community"
+      ],
+      "regions": [
+        "indonesia",
+        "asean",
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "ctf",
+        "community",
+        "primary_source"
+      ],
+      "tags": [
+        "tcp1p",
+        "indonesia",
+        "ctf",
+        "writeups",
+        "challenges"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-tryhards",
+      "name": "TryHards",
+      "domain": "tryhards.community",
+      "path": "/",
+      "type": "ctf_platform",
+      "categories": [
+        "indonesia",
+        "asean",
+        "ctf",
+        "hands_on",
+        "offensive_security",
+        "community"
+      ],
+      "regions": [
+        "indonesia",
+        "asean"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "ctf",
+        "community",
+        "offensive_security"
+      ],
+      "tags": [
+        "tryhards",
+        "indonesia",
+        "web",
+        "pwn",
+        "crypto",
+        "reverse-engineering",
+        "forensics",
+        "osint"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-ctfroom",
+      "name": "CTFROOM",
+      "domain": "ctfroom.com",
+      "path": "/",
+      "type": "ctf_platform",
+      "categories": [
+        "ctf",
+        "hands_on",
+        "cyber_range",
+        "training"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "ctf",
+        "training",
+        "cyber_range"
+      ],
+      "tags": [
+        "cyber-range",
+        "ctf",
+        "cyber-drills",
+        "tabletop-exercises",
+        "training"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "ctf-hackerdna",
+      "name": "HackerDNA",
+      "domain": "hackerdna.com",
+      "path": "/labs/challenges",
+      "type": "ctf_platform",
+      "categories": [
+        "ctf",
+        "hands_on",
+        "web_security",
+        "reverse_engineering",
+        "forensics",
+        "osint"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 5,
+      "role": [
+        "hands_on",
+        "ctf",
+        "training",
+        "web_security"
+      ],
+      "tags": [
+        "hackerdna",
+        "challenges",
+        "hacking-labs",
+        "web-security",
+        "forensics",
+        "cryptography",
+        "reverse-engineering"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "newsletter-tldrsec",
+      "name": "tl;dr sec",
+      "domain": "tldrsec.com",
+      "path": "/subscribe",
+      "type": "security_digest",
+      "categories": [
+        "newsletter",
+        "security_research",
+        "news",
+        "curation"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "digest",
+        "curation",
+        "research_discovery"
+      ],
+      "tags": [
+        "tldrsec",
+        "security-research",
+        "tools",
+        "talks",
+        "cloud-security",
+        "application-security"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "newsletter-this-week-4n6",
+      "name": "This Week in 4n6",
+      "domain": "thisweekin4n6.com",
+      "path": "/",
+      "type": "security_digest",
+      "categories": [
+        "newsletter",
+        "dfir",
+        "digital_forensics",
+        "incident_response"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "digest",
+        "dfir",
+        "forensics",
+        "research_discovery"
+      ],
+      "tags": [
+        "this-week-in-4n6",
+        "dfir",
+        "digital-forensics",
+        "incident-response",
+        "weekly-roundup"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "newsletter-rehack",
+      "name": "RE:HACK Newsletter",
+      "domain": "rehack.substack.com",
+      "path": "/",
+      "type": "security_digest",
+      "categories": [
+        "newsletter",
+        "security_research",
+        "ctf",
+        "vulnerability"
+      ],
+      "regions": [
+        "global",
+        "asia"
+      ],
+      "tier": 2,
+      "role": [
+        "digest",
+        "curation",
+        "research_discovery"
+      ],
+      "tags": [
+        "rehack",
+        "technical-articles",
+        "ctf",
+        "vulnerability-research",
+        "tools",
+        "writeups"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "newsletter-return-on-security",
+      "name": "Return on Security",
+      "domain": "returnonsecurity.com",
+      "path": "/t/newsletter",
+      "type": "security_digest",
+      "categories": [
+        "newsletter",
+        "industry",
+        "cybersecurity",
+        "market_intelligence"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "digest",
+        "industry_signal",
+        "market_intelligence"
+      ],
+      "tags": [
+        "return-on-security",
+        "cybersecurity-business",
+        "funding",
+        "mergers-acquisitions",
+        "market-intelligence"
+      ],
+      "health": {
+        "signal": null,
+        "noise": null,
+        "activity": null,
+        "keep": null,
+        "last_checked": null,
+        "notes": null
+      }
+    },
+    {
+      "id": "newsletter-this-week-in-security",
+      "name": "This Week in Security",
+      "domain": "this.weekinsecurity.com",
+      "path": "/",
+      "type": "security_digest",
+      "categories": [
+        "newsletter",
+        "news",
+        "incident_signal",
+        "privacy",
+        "cybercrime"
+      ],
+      "regions": [
+        "global"
+      ],
+      "tier": 2,
+      "role": [
+        "digest",
+        "news",
+        "incident_signal",
+        "curation"
+      ],
+      "tags": [
+        "this-week-in-security",
+        "weekly-roundup",
+        "data-breach",
+        "cybercrime",
+        "privacy",
+        "policy"
       ],
       "health": {
         "signal": null,

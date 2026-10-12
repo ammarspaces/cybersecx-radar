@@ -301,6 +301,178 @@ TYPE_INSTRUCTIONS = {
 }
 
 
+# Type-specific guidance for resource types used in the current database.
+# Legacy instructions above remain available for older databases.
+TYPE_INSTRUCTIONS.update({
+    'academic_index':
+        'Use this to discover papers; verify the original paper, authors, venue and publication date.',
+    'academic_organization':
+        'Identify one relevant research group or publication, then inspect its primary research output.',
+    'academic_platform':
+        'Find one relevant paper or dataset and record its research question, method and limitations.',
+    'academic_repository':
+        'Locate the original paper or dataset; verify authorship, version, citations and reproducibility details.',
+    'academic_research':
+        'Extract the research question, method, evidence, result and limitations; note what remains unproven.',
+    'academic_security':
+        'Choose one security paper and separate the demonstrated results from the authors’ interpretation.',
+    'adversary_simulation':
+        'Use only an authorized lab; compare expected behavior with observed telemetry and document detection gaps.',
+    'advisory_database':
+        'Trace an entry to the primary vendor/CVE advisory; record affected versions, impact and remediation.',
+    'ai_security':
+        'Define the AI system boundary and threat model, then identify one attack path or control worth validating.',
+    'ai_security_company':
+        'Treat product claims as leads; find public technical evidence, methodology or independent validation.',
+    'ai_security_framework':
+        'Select one AI risk or control and translate it into a concrete threat scenario and testable question.',
+    'ai_security_research':
+        'Extract the threat model, evaluation method, results and limitations; distinguish measured evidence from speculation.',
+    'binary_analysis_framework':
+        'Use a small, authorized sample; document the framework’s output and independently verify one observation.',
+    'botnet_tracker':
+        'Treat listed infrastructure as a time-sensitive lead; verify timestamps and corroborate with independent telemetry.',
+    'bug_bounty_platform':
+        'Study one public disclosure and its root cause; test only targets explicitly in scope and authorized.',
+    'cert':
+        'Find one operational advisory; extract affected systems, indicators and mitigations, then corroborate with the vendor source.',
+    'cert_community':
+        'Treat community reports as leads; locate the original advisory or incident evidence and check publication dates.',
+    'code_platform':
+        'Inspect one relevant repository’s code, issues, commits and releases; identify a concrete security question.',
+    'community_platform':
+        'Use discussion to discover leads, not as proof; trace one claim to a primary source or reproducible artifact.',
+    'conference_directory':
+        'Find one specific security talk or paper and follow it to the speaker’s primary technical material.',
+    'conference_network':
+        'Use this to identify a researcher or topic, then follow the person’s work to a primary publication or talk.',
+    'cryptographic_library':
+        'Check the library documentation, supported primitives and release history; avoid inferring security from algorithm names alone.',
+    'cryptography_organization':
+        'Trace one recommendation to the original standard or specification and note scope and assumptions.',
+    'ctf_directory':
+        'Choose one challenge that fits your level; attempt it before reading a write-up and record the evidence chain.',
+    'ctf_platform':
+        'Attempt one focused challenge before reading a write-up; document the key observation, solution path and lesson.',
+    'detection_database':
+        'Select one rule or analytic; identify the behavior, required telemetry, false positives and a safe validation method.',
+    'detection_framework':
+        'Map one behavior to a detection idea and specify data sources, logic, blind spots and validation steps.',
+    'detection_platform':
+        'Inspect one analytic or detection use case; determine what it detects and what telemetry it actually requires.',
+    'dfir_lab_platform':
+        'Treat one lab as an investigation: preserve artifacts, form hypotheses, test them and explain the conclusion.',
+    'dns_osint':
+        'Pivot from a domain through DNS history and related infrastructure; verify observations and their timestamps.',
+    'event_directory':
+        'Pick one event or talk with a concrete technical topic; use it to identify the primary research source.',
+    'exploit_database':
+        'Determine whether the exploit is reliable, applicable and historically relevant; verify affected versions and root cause.',
+    'fediverse':
+        'Treat posts as early signals; verify claims against original advisories, code, data or researcher publications.',
+    'fuzzing_project':
+        'Identify the target, input model and bug class; reproduce only in an authorized environment and inspect the fix.',
+    'government_cert':
+        'Extract the actionable advisory details and cross-check them with affected vendors and other trusted sources.',
+    'incident_report':
+        'Reconstruct the timeline, initial access, observed TTPs and evidence; label confirmed facts versus assessment.',
+    'internet_observation':
+        'Understand the dataset, vantage points and collection period; validate one observation before drawing conclusions.',
+    'internet_registry':
+        'Use registration and routing data as context, not attribution; check dates and corroborate with technical evidence.',
+    'knowledgebase':
+        'Use this as a reference map; identify one claim and verify it against primary documentation or an artifact.',
+    'lab_platform':
+        'Choose one bounded hands-on exercise, attempt it first and finish with a short note about evidence and learning.',
+    'malware_analysis':
+        'Use only a safe, authorized sample in an isolated environment; record behavior and indicators before making claims.',
+    'malware_knowledgebase':
+        'Use family labels as a lead; verify the behavior, hashes and detection claims against primary analysis.',
+    'malware_repository':
+        'Inspect sample metadata and provenance first; analyze only in a controlled lab and correlate findings independently.',
+    'mobile_security_company':
+        'Trace one mobile-security claim to technical research, an advisory or a reproducible demonstration.',
+    'mobile_security_platform':
+        'Use an authorized test app or device; document the finding, affected boundary and reproducible evidence.',
+    'mobile_security_tool':
+        'Test against an app or device you own or are authorized to assess; verify one output manually.',
+    'national_cert':
+        'Prioritize a concrete national advisory; capture affected products, indicators, mitigations and the original source.',
+    'network_analysis':
+        'Start with packets or flow metadata; formulate a protocol/behavior hypothesis and verify it in the evidence.',
+    'network_security_tool':
+        'Identify what traffic or behavior the tool can observe, what it misses and how to validate one result.',
+    'open_source_project':
+        'Inspect source code, security policy, releases and fixes; identify one change or issue worth understanding.',
+    'osint_platform':
+        'Define a narrow question first; record provenance and timestamps, and independently validate important findings.',
+    'osint_research':
+        'Follow one finding to its original data and method; note uncertainty, provenance and reproducibility limits.',
+    'osint_tool':
+        'Use it only for a defined, lawful research question; verify one result using an independent source.',
+    'osint_toolkit':
+        'Choose one tool for a specific question; document the inputs, provenance and independent validation of output.',
+    'ot_security_company':
+        'Identify the relevant industrial protocol or asset and assess technical evidence alongside operational impact.',
+    'reddit':
+        'Use a discussion as a sensor, not evidence; extract one testable question and locate its primary technical source.',
+    'research_company':
+        'Find the organization’s underlying report, data or technical post; separate evidence from marketing language.',
+    'research_team':
+        'Pick one technical finding and trace it to a report, artifact, dataset or presentation; note limitations.',
+    'researcher_network':
+        'Identify one researcher working on a relevant question, then follow their primary publications and artifacts.',
+    'reverse_engineering_community':
+        'Treat community posts as leads; verify one claim through a sample, disassembly or primary write-up.',
+    'security_academy':
+        'Learn one bounded technique and test it immediately in the provided safe lab or an authorized environment.',
+    'security_community':
+        'Use community activity to find a question; validate it with original evidence before accepting the claim.',
+    'security_company':
+        'Separate product messaging from technical evidence; find a report, demo, advisory or reproducible artifact.',
+    'security_company_research':
+        'Select one research report and trace its key claims, indicators and TTPs to supporting evidence.',
+    'security_digest':
+        'Choose one item only; follow it to the primary advisory, paper, repository or incident report.',
+    'security_documentation':
+        'Find the exact feature or control relevant to one question and test the documented behavior safely.',
+    'security_ecosystem':
+        'Use this for ecosystem discovery; select one organization or project and follow its primary technical output.',
+    'security_framework':
+        'Choose one control or technique and translate it into a concrete detection or validation question.',
+    'security_lab':
+        'Attempt one focused exercise before consulting a solution; preserve the observations that led to your conclusion.',
+    'security_organization':
+        'Identify the organization’s operational or research role, then follow one concrete publication, advisory or project.',
+    'security_platform':
+        'Identify the practical question the platform helps answer and independently validate one result.',
+    'security_research':
+        'Extract one technical claim, its evidence and limitations; trace it to a primary artifact where possible.',
+    'soc_lab_platform':
+        'Investigate one SOC scenario from alert to evidence-backed conclusion and note any telemetry gaps.',
+    'technical_community':
+        'Treat discussions as context; turn one useful claim into a testable question and verify the source.',
+    'threat_intel':
+        'Pivot from one indicator to infrastructure, malware or campaign context; preserve timestamps and confidence.',
+    'threat_intel_platform':
+        'Use one indicator or relationship as a lead; check provenance, freshness and independent corroboration.',
+    'url_analysis':
+        'Analyze only a safe, authorized URL; record redirects, DNS and observed behavior, then corroborate the result.',
+    'url_repository':
+        'Treat submitted URLs as untrusted data; check timestamps and provenance, then pivot to related infrastructure carefully.',
+    'video_channel':
+        'Choose one talk or technical demonstration; extract one claim and follow its references or artifact.',
+    'video_platform':
+        'Use the platform to discover one relevant technical talk; avoid broad consumption and follow the primary source.',
+    'vulnerability_community':
+        'Treat reports as leads; verify the affected component, root cause, impact and remediation independently.',
+    'vulnerability_program':
+        'Review program scope and one public disclosure; never test a target without explicit authorization.',
+    'vulnerability_scanner':
+        'Scan only authorized assets; validate one finding manually and record evidence, impact and false-positive risk.',
+})
+
+
 # ============================================================
 # FILE MANAGEMENT
 # ============================================================
@@ -836,7 +1008,7 @@ def add_history(history, resource, mission, mode, investigation=None):
 def display_pick(resource, mission, mode):
     instruction = TYPE_INSTRUCTIONS.get(
         resource.get("type"),
-        "Treat this as a discovery source."
+        "Treat this as a lead, not proof: formulate one concrete question, trace it to primary evidence, and record what remains uncertain."
     )
 
     print()
